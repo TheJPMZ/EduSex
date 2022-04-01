@@ -1,0 +1,27 @@
+#:import utils kivy.utils
+
+<Preservativos>:
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            size_hint: 1, .2
+            text: "Preservativos"
+            font_size: '20sp'
+            color: 0,0,0,1
+		ScrollView:
+			ListaPreservativos:
+
+<RoundedButton@Button>
+	background_color: (1,1,1,0)
+	background_normal: ''
+    color: 0,0,0,1
+	canvas.before:
+		Color:
+			rgb: utils.get_color_from_hex('#F8CAE2')
+		RoundedRectangle:
+			size: self.size
+			pos: self.pos
+			radius: [10]
+
+
+

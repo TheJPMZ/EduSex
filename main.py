@@ -4,13 +4,15 @@ from kivy.uix.screenmanager import ScreenManager
 from kivy.uix.widget import Widget
 from kivy.core.window import Window
 
+
 import menu
 import settings
 import genero
 import guias
-
+import preservativos
 
 Window.clearcolor = (1, 1, 1, 1)
+Window.size = (1080/3,1920/3)
 
 class EduSexApp(App):
     def build(self):
@@ -19,6 +21,7 @@ class EduSexApp(App):
         sm.add_widget(menu.MainMenu(name="menu"))
         sm.add_widget(settings.Settings(name="settings"))
         sm.add_widget(guias.Guias(name="guias"))
+        sm.add_widget(preservativos.Preservativos(name="preservativos"))
         return sm
 
 
