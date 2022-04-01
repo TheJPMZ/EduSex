@@ -14,33 +14,12 @@ class RoundedButton(Button):
 
 
 class Preservativo(BoxLayout):
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
-
-        self.orientation = 'horizontal'
-        self.spacing= 5
-        self.size_hint = (1, None)
-        self.height = 100s
-
-    def crear(self,x):
-        print(x)
-        b = RoundedButton(text=x)
-        p = self.add_widget(b)
-        preservativos.append(p)
+    pass
 
 
 class ListaPreservativos(BoxLayout):
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
-        for x in preservativos:
-            print(x)
-            self.add_widget(self,x)
+    pass
 
 
 class Preservativos(Screen):
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
-
-        for x in lista:
-            x = Preservativo(x)
     pass
