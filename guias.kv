@@ -1,0 +1,33 @@
+#:import utils kivy.utils
+
+
+<Guias>:
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            size_hint: 1, .2
+            text: "Guias"
+            font_size: '20sp'
+            color: 0,0,0,1
+
+        InnerStack:
+            padding: 30
+
+
+<RoundedButton@Button>
+	background_color: (1,1,1,0)
+	background_normal: ''
+    color: 0,0,0,1
+	canvas.before:
+		Color:
+			rgb: utils.get_color_from_hex('#F8CAE2')
+		RoundedRectangle:
+			size: self.size
+			pos: self.pos
+			radius: [10]
+
+<Tile@RoundedButton>:
+    size_hint: 1, .2
+    font_size: '20sp'
+
+    
