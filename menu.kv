@@ -1,8 +1,59 @@
+#:import utils kivy.utils
+
 <MainMenu>:
+    background_color: 1,1,1,1
     BoxLayout:
-        Button:
-            text: 'Start'
-            on_press: root.manager.current = 'settings'
-        Button:
-            text: 'Quit'
-            on_press: app.stop()
+        orientation: 'vertical'
+        AnchorLayout:
+            size_hint: 1, .6
+            Image:
+                size_hint: .5, .5
+                source: 'images/Iteracion 400 del logo edusex.png'
+
+        BoxLayout:
+            orientation: 'vertical'
+            spacing: 20
+            padding: 50,50,50,70
+
+            #TODO: Mejorar esta parte del codigo
+
+            BoxLayout:
+                orientation: 'horizontal'
+                spacing: 10
+                Image:
+                    source: 'images/Iteracion 400 del logo edusex.png'
+                    size_hint: .5, 1
+                RoundedButton:
+                    text: "Informacion"
+                    on_press: root.manager.current = "guias"
+            BoxLayout:
+                orientation: 'horizontal'
+                spacing: 10
+                Image:
+                    source: 'images/Iteracion 400 del logo edusex.png'
+                    size_hint: .5, 1
+                RoundedButton:
+                    text: "Dudas"
+                    on_press: root.manager.current = "dudas"
+            BoxLayout:
+                orientation: 'horizontal'
+                spacing: 10
+                Image:
+                    source: 'images/sal.png'
+                    size_hint: .5, 1
+                RoundedButton:
+                    text: "Preservativos"
+                    on_press: root.manager.current = "preservativos"
+
+<RoundedButton@Button>
+	background_color: (1,1,1,0)
+	background_normal: ''
+    color: 0,0,0,1
+	canvas.before:
+		Color:
+			rgb: utils.get_color_from_hex('#F8CAE2')
+		RoundedRectangle:
+			size: self.size
+			pos: self.pos
+			radius: [10]
+
