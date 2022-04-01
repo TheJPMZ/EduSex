@@ -2,6 +2,7 @@
 
 
 <Genero>:
+    background_color: 1,1,1,1
     BoxLayout:
         orientation: 'vertical'
         AnchorLayout:
@@ -12,6 +13,7 @@
         Label:
             text: 'Ingresa tu Género'
             font_size: '20sp'
+            color: 0,0,0,1
             size_hint: 1, .2
 
         BoxLayout:
@@ -31,9 +33,10 @@
 <RoundedButton@Button>
 	background_color: (1,1,1,0)
 	background_normal: ''
+    color: 0,0,0,1
 	canvas.before:
 		Color:
-			rgb: utils.get_color_from_hex('#f590ca')
+			rgb: utils.get_color_from_hex('#F8CAE2')
 		RoundedRectangle:
 			size: self.size
 			pos: self.pos

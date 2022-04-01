@@ -2,11 +2,14 @@ from kivy.app import App
 from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager
 from kivy.uix.widget import Widget
+from kivy.core.window import Window
 
 import menu
 import settings
 import genero
 
+
+Window.clearcolor = (1, 1, 1, 1)
 
 class EduSexApp(App):
     def build(self):
