@@ -1,4 +1,4 @@
-from kivy.app import App
+from kivymd.app import MDApp
 from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager
 from kivy.uix.widget import Widget
@@ -9,8 +9,8 @@ import menu
 import settings
 import genero
 import guias
-import preservativos
-import pguias
+import preservativos    
+import dudas
 
 Window.clearcolor = (1, 1, 1, 1)
 Window.size = (1080/3,1920/3)
@@ -26,7 +26,7 @@ def get_data():
     except FileNotFoundError:
         return False
 
-class EduSexApp(App):
+class EduSexApp(MDApp):
     def build(self):
         sm = ScreenManager()
         if not get_data():
@@ -35,7 +35,7 @@ class EduSexApp(App):
         sm.add_widget(settings.Settings(name="settings"))
         sm.add_widget(guias.Guias(name="guias"))
         sm.add_widget(preservativos.Preservativos(name="preservativos"))
-        # sm.add_widget(pguias.Plantilla(name ="plantilla"))
+        sm.add_widget(dudas.Dudas(name ="dudas"))
         return sm
 
 

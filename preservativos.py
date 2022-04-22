@@ -9,6 +9,7 @@ from kivy.uix.stacklayout import StackLayout
 from kivy.uix.label import Label
 from kivy.uix.scrollview import ScrollView
 from kivy.uix.image import Image
+from kivy.uix.recycleview import RecycleView
 from numpy import size
 
 Builder.load_file('preservativos.kv')
