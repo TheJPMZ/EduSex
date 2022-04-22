@@ -4,4 +4,10 @@ from kivy.uix.screenmanager import Screen
 Builder.load_file('PguiasCon.kv')
 
 class PlantillaCon(Screen):
+    index = ""
+    def save_gender(self, ind):
+        self.index= ind
+        print(self.index)
+        self.index
+    
     pass
