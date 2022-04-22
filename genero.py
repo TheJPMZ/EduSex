@@ -9,6 +9,6 @@ class Genero(Screen):
     def save_gender(self, gender):
         self.genero = gender
         print(self.genero)
-        self.manager.current = "menu"
+        self.manager.current = "espermicida"
 
     pass
