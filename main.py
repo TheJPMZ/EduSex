@@ -21,6 +21,7 @@ import condonI
 import esponja
 import capuchon
 import espermicida
+import PguiasMens
 
 #import preservativos
 import preservativos
@@ -74,6 +75,7 @@ class EduSexApp(MDApp):
         sm.add_widget(PguiasCon.PlantillaCon(name="guia_con"))
         sm.add_widget(PguiasPre.PlantillaPre(name="guia_pre"))
         sm.add_widget(planF.PlanF(name="guia_planf"))
+        sm.add_widget(PguiasMens.PlantillaMens(name="PlantillaMens"))
 
         # Informacion
         sm.add_widget(PinfoCon.InfoCon(name="info_con"))

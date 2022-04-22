@@ -14,7 +14,7 @@ dicGuias = {
     "Consentimiento": [25,"info_con"],
     "Preservativos": [25,"info_pre"],
     "Planificacion": [25,"info_planf"],
-    "Guia4": 100,
+    "Menstruacion":  [25,"PlantillaMens"],
     "Guia5": 100,
     "Guia6": 100,
     "Guia7": 100,
