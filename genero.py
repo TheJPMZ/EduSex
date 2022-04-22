@@ -10,6 +10,6 @@ class Genero(Screen):
         self.genero = gender
         print(self.genero)
         self.genero
-        self.manager.current = "InfoP"
+        self.manager.current = "InfoCon"
 
         pass

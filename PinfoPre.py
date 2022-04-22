@@ -10,4 +10,7 @@ class InfoP(Screen):
     def cambiar(self):
         self.manager.current = "Plantilla"
         
-    pass
+        pass
+    def regresar(self):
+        self.manager.current = "Guias "
+        pass

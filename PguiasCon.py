@@ -1,7 +1,7 @@
 from kivy.lang import Builder
 from kivy.uix.screenmanager import Screen
 
-Builder.load_file('Pguias.kv')
+Builder.load_file('PguiasCon.kv')
 
-class Plantilla(Screen):
+class PlantillaCon(Screen):
     pass

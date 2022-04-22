@@ -7,9 +7,8 @@ Builder.load_file('PinfoCon.kv')
 
 
 class InfoCon(Screen):
-    def cambiar(self,index):
-        print(index)
-        self.manager.current = "Plantilla"
+    def cambiar(self):
+        self.manager.current = "PlantillaCon"
 
         
         pass

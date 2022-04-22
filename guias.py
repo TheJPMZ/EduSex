@@ -42,5 +42,9 @@ class Guias(Screen):
         super().__init__(**kwargs)
         pass
 
+    def ir_guia1 (self):
+        self.manager.current = "Info "
+        pass
+
 
  
