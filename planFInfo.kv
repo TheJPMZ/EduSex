@@ -1,0 +1,78 @@
+
+<PlanFInfo>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        AnchorLayout:
+            size_hint: 1, .6
+            Image:
+                size_hint: .3, .5
+                source: 'images/planF.png'
+
+        BoxLayout:
+            orientation: 'vertical'
+            padding: 50, 0, 50, 30
+            size_hint: 1, .2
+                
+            BackgroundLabel:
+                bold: True
+                text: 'Planificación Familiar'
+                font_size: '20sp'
+                color: 0,0,0,1
+                size_hint: 1, .2
+                background_color: 0.97, 0.79, 0.89, 1
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            padding: 50, 20, 50, 20
+
+            Label:
+                size_hint_y: None
+                color: 0,0,0,1
+                text_size: self.width, None
+                height: self.texture_size[1]
+                padding: 50, 50
+
+                text:
+                    '''La planificación familiar se utiliza para poder saber qué métodos anticonceptivos se pueden utilizar al momento de tener relaciones sexuales, además de cuántos hijos se quiere llegar a tener como pareja. Se aprende y se habla acerca de embarazos voluntarios o deseados y también se tratan diferentes temas de fertilidad.\n\nAl llevar a cabo una planificación familar ayuda mucho a no tenner embarazos no deseados (más en adolescentes de 15 a 19 años), por lo que los abortos en dichos casos no son necesarios, salvando vidas y posibles traumas al realizar abortos. Por otra parte, el uso de ciertos métodos anticonceptivos pueden evitar la transmisión de emfermedades sexuales.\n\nEste acceso a información llega a ayudar a la mujer en muchos casos, ya que en muchas ocasiones es esta la que tiene que decidir o encargarse de qué hacer en ciertas situaciones.\n\nSi se enseña de planificación familiar a cualquier ser humano, se puede llegar a evitar más pobreza en el mundo, ya que se dichas personas no tienen una vida estable es poco probable que se le de una buena vida al bebé.\n\nEn Guatemala, lograr una planificación familiar correcta en muchas ocasiones puede ser difícil, debido a que en el país no se tiene ningún tipo de relación con el tema de sexualidad. Este tema es de demasiada importancia para evitar situaciones incómodas o no deseadas'''
+
+        BoxLayout:
+            orientation: 'horizontal'
+            spacing: 20
+            #derecha arriba izquierda abajo
+            padding: 50, 30, 50, 30
+            size_hint: 1, .2
+
+            RoundedButton:
+                text: 'Regresar'
+                on_press: root.manager.current = "guias"
+            RoundedButton:
+                text: 'Evaluar'
+                on_press: root.manager.current = "guia_planf"
+
+<RoundedButton@Button>
+	background_color: (1,1,1,0)
+	background_normal: ''
+    color: 0,0,0,1
+	canvas.before:
+		Color:
+			rgb: utils.get_color_from_hex('#F8CAE2')
+		RoundedRectangle:
+			size: .6, .6
+			pos: self.pos
+			radius: [10]
+
+<BackgroundColor@Widget>
+    background_color: 1, 1, 1, 1
+    canvas.before:
+        Color:
+            rgba: root.background_color
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: [10]
+
+<BackgroundLabel@Label+BackgroundColor>
+    background_color: 0, 0, 0, 0
+    color: 0,0,0,1

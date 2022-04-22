@@ -1,0 +1,82 @@
+
+<Anillo>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        AnchorLayout:
+            size_hint: 1, .6
+            Image:
+                size_hint: .5, .7
+                source: 'images/circulo.png'
+
+            Image:
+                size_hint: .3, .4
+                source: 'images/anillo.png'
+
+        BoxLayout:
+            orientation: 'vertical'
+            padding: 50, 0, 50, 30
+            size_hint: 1, .2
+                
+            BackgroundLabel:
+                bold: True
+                text: 'Anillo Vaginal'
+                font_size: '20sp'
+                color: 0,0,0,1
+                size_hint: 1, .2
+                background_color: 0.97, 0.79, 0.89, 1
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            padding: 50, 20, 50, 20
+
+            Label:
+                size_hint_y: None
+                color: 0,0,0,1
+                text_size: self.width, None
+                height: self.texture_size[1]
+                padding: 50, 50
+
+                text:
+                    '''\n\nLos anillos anticonceptivos poseen un 99% de efectividad si es que la persona lo usa de manera correcta. Al decir de una "manera correcta", se refiere a ponerlo de forma correcta en la vagina. Si en dado caso, la persona no lo hace, pueden ser 91% efectivos. El anillo vaginal se puede utilizar 24/7 y este es capaz de liberar hormonas haciendo que la mujer sea incapaz de quedar embarazada.\n\nEfectos secundarios.\n\nNáuseas, dolores de cabeza, ciclo menstrual irregular, sensibilidad en las glándulas mamarias.\n\nEs importante recalcar que el anillo vaginal no previene enfermedades de transmisión sexual.\n\n(Planned Parenthood, 2022)'''
+
+        BoxLayout:
+            orientation: 'horizontal'
+            spacing: 20
+            #derecha arriba izquierda abajo
+            padding: 50, 30, 50, 30
+            size_hint: 1, .2
+
+            RoundedButton:
+                text: 'Regresar'
+                on_press: root.manager.current = 'preservativos'
+            RoundedButton:
+                text: 'Agregar'
+                on_press: root.save_gender("F")
+
+<RoundedButton@Button>
+	background_color: (1,1,1,0)
+	background_normal: ''
+    color: 0,0,0,1
+	canvas.before:
+		Color:
+			rgb: utils.get_color_from_hex('#F8CAE2')
+		RoundedRectangle:
+			size: .6, .6
+			pos: self.pos
+			radius: [10]
+
+<BackgroundColor@Widget>
+    background_color: 1, 1, 1, 1
+    canvas.before:
+        Color:
+            rgba: root.background_color
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: [10]
+
+<BackgroundLabel@Label+BackgroundColor>
+    background_color: 0, 0, 0, 0
+    color: 0,0,0,1

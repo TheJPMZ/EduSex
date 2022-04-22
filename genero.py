@@ -14,6 +14,7 @@ class Genero(Screen):
     def save_gender(self, gender):
         self.genero = gender
         store_data(self.genero)
+        print(self.manager)
         self.manager.current = "menu"
 
     pass

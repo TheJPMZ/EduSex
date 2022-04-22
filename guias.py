@@ -11,9 +11,9 @@ from math import ceil
 Builder.load_file('guias.kv')
 
 dicGuias = {
-    "Guia1": 25,
-    "Guia2": 25,
-    "Guia3": 25,
+    "Consentimiento": [25,"info_con"],
+    "Preservativos": [25,"info_pre"],
+    "Planificacion": [25,"info_planf"],
     "Guia4": 100,
     "Guia5": 100,
     "Guia6": 100,
@@ -23,6 +23,9 @@ dicGuias = {
     "Guia0": 100,
     "Guia11": 100,
 }
+
+meme = ""
+memes = []
 
 
 class RoundedButton(Button):
@@ -76,15 +79,31 @@ class Guias(Screen):
 
         print(len(dicGuias))
 
+        def meme(x):
+            global meme
+            meme = x
+            self.goanillo(x)
 
         for x, y in dicGuias.items():
             b = Tile(text=x,
+                     on_press=meme
                      )
             InnerStack.add_widget(b)
+            memes.append(b)
         scroll.add_widget(InnerStack)
 
         box.add_widget(scroll)
 
         self.add_widget(box)
+
+    def goanillo(self, *args):
+        global meme
+        print(args)
+        print("Meme>",meme)
+        print(memes.index(meme))
+
+
+        self.manager.current = list(dicGuias.values())[memes.index(meme)][1]
+
 
     pass

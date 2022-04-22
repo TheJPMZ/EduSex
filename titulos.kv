@@ -1,0 +1,39 @@
+#:import utils kivy.utils
+
+<Titulos>:
+    BoxLayout:
+        size_hint: 5,.5 
+        orientation: 'vertical'
+        spacing: 20
+        BackgroundLabel:
+            id:'tituloP'
+            text: 'Preservativos'
+            font_size: '20sp'
+            background_color: 0.97,0.79,0.89,1
+            size_hint: 1, .5
+        BackgroundLabel:
+            id:'tituloTP'
+            text: 'Tipos de preservativos'
+            font_size: '20sp'
+            background_color: 0.97,0.79,0.89,1
+            size_hint: 1, .5
+        BackgroundLabel:
+            id:'tituloVP'
+            text: 'Ventajas de los \npreservativos'
+            font_size: '20sp'
+            background_color: 0.97,0.79,0.89,1
+            size_hint: 1, .5
+
+
+<BackgroundColor@Widget>
+    background_color: 1, 1, 1, 1
+    canvas.before:
+        Color:
+            rgba: root.background_color
+        RoundedRectangle:
+			size: 1, .1
+			pos: self.pos
+			radius: [10]
+<BackgroundLabel@Label+BackgroundColor>
+    background_color: 0, 0, 0, 0
+    color: 0,0,0,1

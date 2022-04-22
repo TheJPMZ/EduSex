@@ -1,0 +1,200 @@
+#:import utils kivy.utils
+
+
+<PlantillaCon>:
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint: 1,1 
+        spacing: 9       
+        BackgroundBoxLayout:
+            spacing: 9
+            orientation: 'horizontal' 
+            background_color: 0.97,0.79,0.89,1
+            size_hint: 1,0.5
+
+            BackgroundLabel:
+                id:'ParteArrib2a'
+                background_color: 0.97,0.79,0.89,1
+                size_hint: 1,0.6
+                text: 'GUIA EVALUATIVA  \n DE CONSENTIMIENTO '
+                halign: 'center'
+                font_size: '14sp'
+               
+            Image:
+                size_hint: .95, .95
+                source: './images/conS.png'
+                    
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: 1,0.8
+            spacing: 9
+            BackgroundLabel:
+                id:'ParteMedia'
+                background_color: 0.61,0.61,0.61,1
+                size_hint: 1,.6
+                text: 'INSTRUCCIONES:\n Completa todos los ejercicios  que se  te presentan \ny acumula puntos'
+                font_size: '12sp'
+                halign: 'center'
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: 1,0.5
+            BackgroundLabel:
+                id:'PartePreguntas'
+                background_color: 0.61,0.61,0.61,1
+                size_hint: 1,0.2
+                text: 'PREGUNTAS'
+                font_size: '10sp'
+                halign: 'center'
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: 1,0.4
+            BackgroundLabel:
+                id:'PartePreguntas'
+                size_hint: 1,.4
+                text: '1. ¿El consentimiento solo se puede\n  dar a través de una forma? \n verdadero o falso'
+                font_size: '12sp'
+                halign: 'center'
+        BackgroundBoxLayout:
+            orientation: 'horizontal'
+            size_hint: .9,.2
+            spacing: 10
+                
+            Button:
+                text: 'Verdadero'
+                on_press: root.save_gender("V")
+            
+                
+            Button:
+                text: 'Falso'
+                on_press: root.save_gender("F")
+               
+
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: 1,.4
+            BackgroundLabel:
+                id:'PartePreguntas'
+                size_hint: 1,.4
+                text: '2. ¿El consentimiento, una vez se da\n se puede hacer lo que se quiera? \nverdadero o falso'
+                font_size: '12sp'
+                halign: 'center'
+        BackgroundBoxLayout:
+            orientation: 'horizontal'
+            size_hint: .9,.2
+            spacing: 10
+                
+            Button:
+                text: 'Verdadero'
+                on_press: root.save_gender("V")
+                
+            Button:
+                text: 'Falso'
+                on_press: root.save_gender("F")
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: 1,.3
+            BackgroundLabel:
+                id:'PartePreguntas'
+                text: '3. ¿Se puede aceptar el consentimiento\n de una persona no lo suficientemente consciente? \nverdadero o falso'
+                font_size: '12sp'
+                halign: 'center'
+                size_hint: 1,.4
+        BackgroundBoxLayout:
+            orientation: 'horizontal'
+            size_hint: .9,.2
+            spacing: 10
+                
+            Button:
+                text: 'Verdadero'
+                on_press: root.save_gender("V")
+                
+            Button:
+                text: 'Falso'
+                on_press: root.save_gender("F")
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: 1,.75
+            BackgroundLabel:
+                id:'PartePreguntas'
+                text: '4. ¿Aprovecharse de una situación para \n obtener consentimiento es aceptado? \nverdadero o falso'
+                font_size: '12sp'
+                halign: 'center'
+                size_hint: 1,.4
+        BackgroundBoxLayout:
+            orientation: 'horizontal'
+            size_hint: .9,.2
+            spacing: 10
+                
+            Button:
+                text: 'Verdadero'
+                on_press: root.save_gender("V")
+                
+            Button:
+                text: 'Falso'
+                on_press: root.save_gender("F")
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: 1,.4
+            BackgroundLabel:
+                id:'PartePreguntas'
+                text: '5. ¿El consentimiento se puede \nretirar en cualquier momento? \nverdadero o falso'
+                font_size: '12sp'
+                halign: 'center'
+                size_hint: 1,.4
+
+        BackgroundBoxLayout:
+            orientation: 'horizontal'
+            size_hint: .9,.2
+            spacing: 10
+                
+            Button:
+                text: 'Verdadero'
+                on_press: root.save_gender("V")
+                
+            Button:
+                text: 'Falso'
+                on_press: root.save_gender("F")
+        BackgroundBoxLayout:
+            orientation: 'horizontal'
+            size_hint: 1,.5
+            spacing: 10
+                
+            Button:
+                text: 'Calificar'
+                background_color: 0.56,0.56,0.561,.7
+        
+
+                
+           
+                            
+    
+
+        
+<BackgroundColor@Widget>
+    background_color: 1, 1, 1, 1
+    canvas.before:
+        Color:
+            rgba: root.background_color
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+<BackgroundLabel@Label+BackgroundColor>
+    background_color: 0, 0, 0, 0
+    color: 0,0,0,1
+ 
+<BackgroundBoxLayout@BoxLayout+BackgroundColor>
+    background_color: 0, 0, 0, 0
+    color: 0,0,0,1
+
+<RoundedButton@Button>
+	background_color: (1,1,1,0)
+	background_normal: ''
+    color: 0,0,0,1
+	canvas.before:
+		Color:
+			rgb: utils.get_color_from_hex('#F8CAE2')
+		RoundedRectangle:
+			size: self.size
+			pos: self.pos
+			radius: [10]
