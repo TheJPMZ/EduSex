@@ -1,0 +1,176 @@
+
+<PlanF>:
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint: 1,1 
+        spacing: 9     
+        # padding: 50, 0, 50, 0
+          
+        BackgroundBoxLayout:
+            spacing: 9
+            orientation: 'horizontal' 
+            background_color: 0.97,0.79,0.89,1
+            size_hint: 1,0.5
+
+            BackgroundLabel:
+                id:'ParteArrib2a'
+                background_color: 0.97,0.79,0.89,1
+                size_hint: 1,0.6
+                text: 'GUIA EVALUATIVA  \n DE PLANIFICACIÓN FAMILIAR'
+                halign: 'center'
+                font_size: '14sp'
+               
+            Image:
+                size_hint: .95, .95
+                source: './images/planF.png'
+                    
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: 1,0.8
+            spacing: 9
+            BackgroundLabel:
+                id:'ParteMedia'
+                background_color: 0.61,0.61,0.61,1
+                size_hint: 1,.6
+                text: 'INSTRUCCIONES:\n Completa todos los ejercicios  que se te presentan \ny acumula puntos'
+                font_size: '12sp'
+                halign: 'center'
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: 1,0.5
+            BackgroundLabel:
+                id:'PartePreguntas'
+                background_color: 0.61,0.61,0.61,1
+                size_hint: 1,0.2
+                text: 'PREGUNTAS'
+                font_size: '10sp'
+                halign: 'center'
+
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: 1,0.9
+            padding: 50, 10, 50, 10
+            BackgroundLabel:
+                id:'PartePreguntas'
+                size_hint: 1,.4
+                text_size: self.width, None
+                height: self.texture_size[1]
+                padding: 50, 50
+                text: '1. La planificación familiar ayuda a que las personas puedan decirdir de manera libre el tener hijos además de los métodos anticonceptivos utilizados'
+                font_size: '12sp'
+                # halign: 'center'
+            BackgroundBoxLayout:
+                orientation: 'horizontal'
+                size_hint: .98,.2
+                spacing: 25
+                
+                RoundedButton:
+                    text: 'Verdadero'
+                RoundedButton:
+                    text: 'Falso'
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: 1,0.9
+            padding: 50, 10, 50, 10
+            BackgroundLabel:
+                id:'PartePreguntas'
+                size_hint: 1,.4
+                text_size: self.width, None
+                height: self.texture_size[1]
+                padding: 50, 50
+                text: '2. La planificación familiar te ayuda a poder prepararte para tener y cuidar de un bebé'
+                font_size: '12sp'
+                # halign: 'center'
+            BackgroundBoxLayout:
+                orientation: 'horizontal'
+                size_hint: .98,.2
+                spacing: 25
+                
+                RoundedButton:
+                    text: 'Verdadero'
+                RoundedButton:
+                    text: 'Falso'
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: 1,0.9
+            padding: 50, 10, 50, 10
+            BackgroundLabel:
+                id:'PartePreguntas'
+                size_hint: 1,.4
+                text_size: self.width, None
+                height: self.texture_size[1]
+                padding: 50, 50
+                text: '3. La planificación familiar puede evitar de cierta manera más pobreza en el mundo'
+                font_size: '12sp'
+                # halign: 'center'
+            BackgroundBoxLayout:
+                orientation: 'horizontal'
+                size_hint: .98,.2
+                spacing: 25
+                
+                RoundedButton:
+                    text: 'Verdadero'
+                RoundedButton:
+                    text: 'Falso'
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: 1,0.9
+            padding: 50, 10, 50, 10
+            BackgroundLabel:
+                id:'PartePreguntas'
+                size_hint: 1,.4
+                text_size: self.width, None
+                height: self.texture_size[1]
+                padding: 50, 50
+                text: '4. Existen métodos anticonceptivos que ayudan a prevenir enfermedades'
+                font_size: '12sp'
+                # halign: 'center'
+            BackgroundBoxLayout:
+                orientation: 'horizontal'
+                size_hint: .98,.2
+                spacing: 25
+                
+                RoundedButton:
+                    text: 'Verdadero'
+                RoundedButton:
+                    text: 'Falso'
+
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: 1,0.3
+            padding: 230, 10, 230, 10
+            Button:
+                text: 'Calificar'
+
+                            
+    
+
+        
+<BackgroundColor@Widget>
+    background_color: 1, 1, 1, 1
+    canvas.before:
+        Color:
+            rgba: root.background_color
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+<BackgroundLabel@Label+BackgroundColor>
+    background_color: 0, 0, 0, 0
+    color: 0,0,0,1
+ 
+<BackgroundBoxLayout@BoxLayout+BackgroundColor>
+    background_color: 0, 0, 0, 0
+    color: 0,0,0,1
+
+<RoundedButton@Button>
+	background_color: (1,1,1,0)
+	background_normal: ''
+    color: 0,0,0,1
+	canvas.before:
+		Color:
+			rgb: utils.get_color_from_hex('#F8CAE2')
+		RoundedRectangle:
+			size: self.size
+			pos: self.pos
+			radius: [1]

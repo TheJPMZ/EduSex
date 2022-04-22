@@ -4,8 +4,8 @@ from kivy.core.window import Window
 from kivy.lang import Builder
 from kivy.uix.screenmanager import Screen
 
-Builder.load_file('espermicida.kv')
+Builder.load_file('planFInfo.kv')
 
-class Espermicida(Screen):
+class PlanFInfo(Screen):
 
     pass
