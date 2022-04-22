@@ -7,5 +7,7 @@ Builder.load_file('PinfoPre.kv')
 
 
 class InfoP(Screen):
+    def cambiar(self):
+        self.manager.current = "Plantilla"
         
     pass
