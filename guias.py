@@ -33,11 +33,14 @@ class InnerStack(StackLayout):
                      size_hint=(.2, .2)
                      )
             self.add_widget(b)
+    
 
 
 class Guias(Screen):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
+        pass
 
-    pass
+
+ 

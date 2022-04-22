@@ -1,0 +1,137 @@
+#:import utils kivy.utils
+
+
+<Plantilla>:
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint: 1,1 
+        spacing: 9       
+        BackgroundBoxLayout:
+            spacing: 9
+            orientation: 'horizontal' 
+            background_color: 0.97,0.79,0.89,1
+            size_hint: 1,0.5
+
+            BackgroundLabel:
+                id:'ParteArrib2a'
+                background_color: 0.97,0.79,0.89,1
+                size_hint: 1,0.6
+                text: 'GUIA EVALUATIVA  \n DE PRESERVATIVOS '
+                halign: 'center'
+                font_size: '14sp'
+               
+            Image:
+                size_hint: .95, .95
+                source: './images/condon.png'
+                    
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: 1,0.8
+            spacing: 9
+            BackgroundLabel:
+                id:'ParteMedia'
+                background_color: 0.61,0.61,0.61,1
+                size_hint: 1,.6
+                text: 'INSTRUCCIONES:\n Completa todos los ejercicios  que se  te presentan \ny acumula puntos'
+                font_size: '12sp'
+                halign: 'center'
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: 1,0.5
+            BackgroundLabel:
+                id:'PartePreguntas'
+                background_color: 0.61,0.61,0.61,1
+                size_hint: 1,0.2
+                text: 'PREGUNTAS'
+                font_size: '10sp'
+                halign: 'center'
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: 1,0.4
+            BackgroundLabel:
+                id:'PartePreguntas'
+                size_hint: 1,.4
+                text: '1. Los condones son efectivos contra el VIH \n y otras Enfermedades de transmisión \nsexual, verdadero o falso?'
+                font_size: '12sp'
+                halign: 'center'
+            BackgroundBoxLayout:
+                orientation: 'horizontal'
+                size_hint: .98,.1
+                spacing: 25
+                
+                RoundedButton:
+                    text: 'Verdadero'
+                RoundedButton:
+                    text: 'Falso'
+
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: 1,.4
+            BackgroundLabel:
+                id:'PartePreguntas'
+                size_hint: 1,.4
+                text: '2. Un condón es una cubierta delgada\n usada en el pene durante \nel coito, verdadero o falso?'
+                font_size: '12sp'
+                halign: 'center'
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: 1,.4
+            BackgroundLabel:
+                id:'PartePreguntas'
+                text: '3. Los condones son frágiles y delicados,\n  verdadero o falso?'
+                font_size: '12sp'
+                halign: 'center'
+                size_hint: 1,.4
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: 1,.4
+            BackgroundLabel:
+                id:'PartePreguntas'
+                text: '4. Existen variedades de preservativos, tales como: \nCon o sin lubricante, \nCon o sin depósito para semen, \nFinos o gruesos,De colores y sabores, \n verdadero o falso?'
+                font_size: '12sp'
+                halign: 'center'
+                size_hint: 1,.4
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: 1,.4
+            BackgroundLabel:
+                id:'PartePreguntas'
+                text: '5. Los condones pueden ser reutilizados, \nverdadero o falso?'
+                font_size: '12sp'
+                halign: 'center'
+                size_hint: 1,.4
+        Button:
+            text: 'Realizar Examen'
+
+                            
+    
+
+        
+<BackgroundColor@Widget>
+    background_color: 1, 1, 1, 1
+    canvas.before:
+        Color:
+            rgba: root.background_color
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+<BackgroundLabel@Label+BackgroundColor>
+    background_color: 0, 0, 0, 0
+    color: 0,0,0,1
+ 
+<BackgroundBoxLayout@BoxLayout+BackgroundColor>
+    background_color: 0, 0, 0, 0
+    color: 0,0,0,1
+
+<RoundedButton@Button>
+	background_color: (1,1,1,0)
+	background_normal: ''
+    color: 0,0,0,1
+	canvas.before:
+		Color:
+			rgb: utils.get_color_from_hex('#F8CAE2')
+		RoundedRectangle:
+			size: self.size
+			pos: self.pos
+			radius: [1]
