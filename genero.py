@@ -6,11 +6,10 @@ Builder.load_file('genero.kv')
 
 class Genero(Screen):
     genero = ""
-    nom="estefania"
     def save_gender(self, gender):
         self.genero = gender
         print(self.genero)
         self.genero
-        self.manager.current = "Plantilla"
+        self.manager.current = "InfoP"
 
         pass

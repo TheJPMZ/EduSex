@@ -10,6 +10,8 @@ import settings
 import genero
 import guias
 import Pguias
+import PinfoPre
+import PinfoCon
 ##import preservativos
 
 Window.clearcolor = (1, 1, 1, 1)
@@ -24,6 +26,8 @@ class EduSexApp(App):
         sm.add_widget(guias.Guias(name="guias"))
         ##sm.add_widget(preservativos.Preservativos(name="preservativos"))
         sm.add_widget(Pguias.Plantilla(name ="Plantilla"))
+        sm.add_widget(PinfoPre.InfoP(name ="InfoP"))
+        sm.add_widget(PinfoCon.InfoCon(name ="InfoCon"))
         return sm
 
 

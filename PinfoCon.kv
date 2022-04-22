@@ -1,0 +1,57 @@
+#:import utils kivy.utils
+
+<InfoCon>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        AnchorLayout:
+            size_hint: 1, .6
+            Image:
+                size_hint: .5, .5
+                source: 'images/cons.png'
+                
+        Label:
+            text: 'Consentimiento'
+            font_size: '25sp'
+            color: 0,0,0,1
+            size_hint: 1, .2
+
+        ScrollView:
+            #size_hint: 3, .3
+            do_scroll_x: False
+            do_scroll_y: True
+
+            Label:
+                size_hint_y: None
+                text_size: self.width, None
+                height: self.texture_size[1]
+                size_hint_y: None
+                color: 0,0,0,1
+                padding: 50, 50
+                text: 
+                    '¿Qué es un preservativo? \n\nEl preservativo es el método anticonceptivo de barrera más frecuente para los hombres, con una eficacia del 97 por ciento. Consiste en una funda de látex (u otros materiales sintéticos) que se coloca sobre el pene o vagina, impidiendo así el paso del semen y reteniéndolo. Sirve además para evitar el contagio de infecciones de transmisión sexual como el sida, la gonorrea, la clamidia, la tricomoniasis, la sífilis, el herpes genital o el virus del papiloma humano, con una eficacia del 95 por ciento.\n\nColocación\n\nAl abrir el envoltorio del preservativo o condón es importante hacerlo con cuidado y con las manos, para evitar toda posibilidad de que se rompa durante este proceso. No se recomienda por lo tanto usar tijeras u otro utensilio similar para abrirlo, ni tampoco hacerlo con los dientes.Para colocar el preservativo de forma correcta, el pene tiene que estar completamente erecto. Si el pene no está circunciso, antes de su colocación se debe dejar el glande al descubierto. Se coge el extremo saliente del preservativo y se aprieta para que no entre aire. En este pequeño espacio es donde se depositará el semen. Una vez dejado el espacio, se coloca sobre el pene y se desenrolla el resto del condón hasta haber cubierto todo el pene. Cuando el pene haya eyaculado, es aconsejable retirar el condón antes de que el pene deje de estar erecto para hacerlo con mayor facilidad.Es importante colocar el preservativo antes de cualquier contacto entre los genitales, ya que el pene puede expulsar secreciones preeyaculatorias antes de la eyaculación en sí, y estos fluidos pueden contener los posibles agentes infecciosos de las enfermedades de transmisión sexual, así como espermatozoides que pueden llegar a fecundar el óvulo.En ningún caso se recomienda colocar más de un preservativo, pues la fricción que se daría entre los dos preservativos facilitaría su ruptura\n\nTipos de preservativos\n\n Existen variedades de preservativos que cuentan con diferentes características\n\nCon o sin lubricante el lubricante puede facilitar la entrada del pene, ya sea en sexo vaginal o sexo anal. Algunos lubricantes incluyen espermicida, una sustancia que debilita los espermatozoides en el caso de que el preservativo se rompa, aunque también puede causar infecciones de orina en los hombres\n\nCon o sin depósito para semen\n\nFinos o gruesos, que otorgan diferentes sensaciones\n\nDe colores\n\nDe sabores, pensados para la práctica del sexo oral'
+
+        BoxLayout:
+            orientation: 'horizontal'
+            spacing: 20
+            padding: 10, 50, 10, 20
+            size_hint: 1, .2
+
+            RoundedButton:
+                text: 'Regresar'
+                
+            RoundedButton:
+                text: 'Evaluar'
+                on_press: root.cambiar("holi")
+               
+<RoundedButton@Button>
+	background_color: (1,1,1,0)
+	background_normal: ''
+    color: 0,0,0,1
+	canvas.before:
+		Color:
+			rgb: utils.get_color_from_hex('#F8CAE2')
+		RoundedRectangle:
+			size: .6, .6
+			pos: self.pos
+			radius: [10]

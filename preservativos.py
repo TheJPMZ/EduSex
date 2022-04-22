@@ -20,7 +20,7 @@ class Preservativo(BoxLayout):
         self.orientation = 'horizontal'
         self.spacing= 5
         self.size_hint = (1, None)
-        self.height = 100s
+        self.height = 100
 
     def crear(self,x):
         print(x)
