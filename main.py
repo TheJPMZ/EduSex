@@ -19,6 +19,9 @@ import condonI
 import esponja
 import capuchon
 import espermicida
+import planF
+import planFInfo
+import carrito
 
 #import preservativos
 

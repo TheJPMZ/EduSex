@@ -1,0 +1,69 @@
+
+<Carrito>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        AnchorLayout:
+            size_hint: 1, .6
+            
+
+        # BoxLayout:
+        #     orientation: 'vertical'
+        #     padding: 50, 0, 50, 30
+        #     size_hint: 1, .2
+                
+            BackgroundLabel:
+                bold: True
+                text: ''
+                font_size: '20sp'
+                color: 0,0,0,1
+                size_hint: 1, .2
+                background_color: 0.91, 0.68, 0.76, 1
+
+            Image:
+                size_hint: .5, .7
+                source: 'images/compraC.png'
+
+            Image:
+                size_hint: .3, .4
+                source: 'images/compra.png'
+
+        BoxLayout:
+            orientation: 'horizontal'
+            spacing: 20
+            #derecha arriba izquierda abajo
+            padding: 50, 30, 50, 30
+            size_hint: 1, .2
+
+            RoundedButton:
+                text: 'Regresar'
+                on_press: root.save_gender("M")
+            RoundedButton:
+                text: 'Agregar'
+                on_press: root.save_gender("F")
+
+<RoundedButton@Button>
+	background_color: (1,1,1,0)
+	background_normal: ''
+    color: 0,0,0,1
+	canvas.before:
+		Color:
+			rgb: utils.get_color_from_hex('#F8CAE2')
+		RoundedRectangle:
+			size: .6, .6
+			pos: self.pos
+			radius: [10]
+
+<BackgroundColor@Widget>
+    background_color: 1, 1, 1, 1
+    canvas.before:
+        Color:
+            rgba: root.background_color
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: [10]
+
+<BackgroundLabel@Label+BackgroundColor>
+    background_color: 0, 0, 0, 0
+    color: 0,0,0,1
