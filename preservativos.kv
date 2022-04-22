@@ -1,42 +1,5 @@
 #:import utils kivy.utils
 
-<Preservativos>:
-    BoxLayout:
-        orientation: 'vertical'
-        Label:
-            size_hint: 1, .2
-            text: "Preservativos"
-            font_size: '20sp'
-            color: 0,0,0,1
-		ScrollView:
-			ListaPreservativos:
-				Preservativo:
-					text: "A"
-				Preservativo:
-					text: "B"
-
-
-<Preservativo@BoxLayout>
-	orientation: 'horizontal'
-	spacing: 5
-	size_hint: 1, None
-	height: 100
-	Image:
-		source: 'images/sal.png'
-		size_hint: .5, 1
-	RoundedButton:
-	    size_hint: 1, 1
-
-
-
-<ListaPreservativos@BoxLayout>:
-	orientation: 'vertical'
-	spacing: 10
-	padding: 20
-	size_hint_y: None
-	height: self.minimum_height
-
-
 
 <RoundedButton@Button>
 	background_color: (1,1,1,0)
@@ -49,6 +12,4 @@
 			size: self.size
 			pos: self.pos
 			radius: [10]
-
-
 

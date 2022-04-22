@@ -1,0 +1,35 @@
+<Dudas>:
+    BoxLayout:
+        orientation: 'vertical'
+        BoxLayout:
+			orientation: 'horizontal'
+			size_hint_y: .2
+			spacing: 10
+            MDIconButton:
+                icon: 'magnify'
+                size_hint_y: 1
+				padding: 0,10,0,0
+			MDTextField:
+				hint_text: 'Buscar'
+				size_hint_y: .4
+				mode: 'rectangle'
+				line_color_focus: 0.97,0.79,0.89,1
+            MDIconButton:
+                icon: 'close'
+                size_hint_y:1
+                text_color: 0,0,0,1
+				padding: 0,10,0,0
+				on_press: root.manager.current = 'menu'
+
+        BoxLayout:
+            orientation: 'vertical'
+            padding: 4
+            RecycleView:
+                RecycleBoxLayout:
+                    spacing: 15
+                    padding : 10
+                    default_size: None, None
+                    default_size_hint: 1, None
+                    size_hint_y: None
+                    height: self.minimum_height
+                    orientation: 'vertical'
