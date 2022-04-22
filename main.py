@@ -22,6 +22,7 @@ import esponja
 import capuchon
 import espermicida
 import PguiasMens
+import PguiasITS
 
 #import preservativos
 import preservativos
@@ -33,6 +34,8 @@ import PinfoCon
 import PinfoPre
 import planFInfo
 import planF
+import info_its
+import info_mens
 
 
 Window.clearcolor = (1, 1, 1, 1)
@@ -76,11 +79,16 @@ class EduSexApp(MDApp):
         sm.add_widget(PguiasPre.PlantillaPre(name="guia_pre"))
         sm.add_widget(planF.PlanF(name="guia_planf"))
         sm.add_widget(PguiasMens.PlantillaMens(name="PlantillaMens"))
+        sm.add_widget(PguiasITS.PlantillaITS(name="PlantillaITS"))
+
 
         # Informacion
         sm.add_widget(PinfoCon.InfoCon(name="info_con"))
         sm.add_widget(PinfoPre.InfoP(name="info_pre"))
         sm.add_widget(planFInfo.PlanFInfo(name="info_planf"))
+        sm.add_widget(info_its.InfoITS(name="info_its"))
+        sm.add_widget(info_mens.InfoMens(name="info_mens"))
+        
 
 
         return sm
