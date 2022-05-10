@@ -1,0 +1,42 @@
+{
+    "Masturbarse es malo para la salud?" : {
+        "tags":["Masturbacion","Salud","Ets"],
+        "info":"La masturbación no es mala. De hecho te ayuda a liberar tensión, reducir estrés, dormir mejor entre otros. Además que es algo natural y no tienes riesgo de embarazo ni de contraer enfermedades de transmisión sexual."
+    },
+    "Masturbarse hace que te crezca pelo en las manos?" : {
+        "tags":["Masturbacion"],
+        "info":"No, esto es un mito."
+    },
+    "Masturbarse evita que tengas hijos?" : {
+        "tags":["Masturbacion", "Fertilidad"],
+        "info":"No hay relación entre la masturbación y la infertilidad."
+    },
+    "Como saber si me masturbo demasiado?" : {
+        "tags":["Masturbacion"],
+        "info":"Si masturbarse te empieza a agotar o interfiere con tu trabajo u otras áreas de tu vida deberías disminuirlo, para ello puedes hablar con un consejero."
+    },
+    "¿Las mujeres eyaculan?" : {
+        "tags":["Orgasmo","Eyacular","Femenino"],
+        "info":"Una buena parte. Algunas secretan líquido al momento del orgasmo, esta cantidad varía, por lo que en algunos casos ninguna parte de la pareja lo percibe."
+    },
+    "¿El tamaño importa?" : {
+        "tags":["Pene","Masculino"],
+        "info":"No es lo más importante, son más importantes factores como las posiciones, las técnicas y la sincronía entre ambas personas."
+    },
+    "¿Es normal que me duela durante la penetración?" : {
+        "tags":["Sexo","Dolor","Femenino"],
+        "info":"No, esto puede darse por no tener suficiente lubricación o utilizar productos irritantes.\n Asimismo si te encuentras en periodo de posparto o menopausia es probable que sufras de sequedad vaginal."
+    },
+    "Puedo quedar embarazada si mi pareja usa condón?" : {
+        "tags":["Fertilidad","Preservativo","Femenino"],
+        "info":"Hay una ligera probabilidad, pero este es de los métodos más confiables. Si tienes dudas puedes ir al apartado de preservativos y conocer otros métodos y su efectividad."
+    },
+    "¿Cómo saber si estoy embarazada?" : {
+        "tags":["Fertilidad","Femenino","Embarazo"],
+        "info":"Hay algunos síntomas que pueden sugerirte que lo estás: Falta de menstruación, Mamas sensibles e hinchadas, Náusea, Fatiga, Calambres, Cambios de humor.\nPara saber si estás embarazada debes realizar una prueba de embarazo y consultar a un médico."
+    },
+    "¿Cuál es el mejor anticonceptivo?" : {
+        "tags":["Preservativo"],
+        "info":"La mejor manera de no quedar embarazada es no tener relaciones sexuales o 'abstinencia'.\nSin embargo, al momento de tener relaciones hay varios métodos, cada uno con sus ventajas y sus desventajas. Entre los que tienen la mayor efectividad se encuentran el DIU y los implantes."
+    }
+}
