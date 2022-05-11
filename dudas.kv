@@ -1,35 +1,39 @@
 <Dudas>:
     BoxLayout:
         orientation: 'vertical'
+        spacing: 10
         BoxLayout:
 			orientation: 'horizontal'
-			size_hint_y: .2
+			size_hint_y: .1
 			spacing: 10
             MDIconButton:
-                icon: 'magnify'
-                size_hint_y: 1
-				padding: 0,10,0,0
+                icon: 'less-than'
+                size_y: 1
+                text_color: 0,0,0,1
+				on_press: root.manager.current = 'menu'
 			MDTextField:
 				hint_text: 'Buscar'
-				size_hint_y: .4
+				height: "10dp"
+				width: "10dp"
 				mode: 'rectangle'
-				line_color_focus: 0.97,0.79,0.89,1
+				line_color_focus: 0,0,1,1
             MDIconButton:
-                icon: 'close'
-                size_hint_y:1
-                text_color: 0,0,0,1
-				padding: 0,10,0,0
-				on_press: root.manager.current = 'menu'
+                icon: 'magnify'
+                size_y: 1
+        ScrollView:
+            BoxLayout:
+                size_hint_y: None
+                height: 600
+                orientation: 'vertical'
+                padding: 8, 0 , 8 , 8
+                margin: 9
+                id: meme
+                Button:
+                    size_hint: 1, None
+                    size_y: 100
+                    text: "memes"
+                Button:
+                    size_hint: 1, None
+                    size_y: 100
+                    text: "memes"
 
-        BoxLayout:
-            orientation: 'vertical'
-            padding: 4
-            RecycleView:
-                RecycleBoxLayout:
-                    spacing: 15
-                    padding : 10
-                    default_size: None, None
-                    default_size_hint: 1, None
-                    size_hint_y: None
-                    height: self.minimum_height
-                    orientation: 'vertical'

@@ -32,8 +32,6 @@ class Preservativos(Screen):
     
     def __init__(self, **kw):
         super().__init__(**kw)
-        
-        scroll = ScrollView()
 
         box = BoxLayout(
             orientation="vertical",
@@ -45,7 +43,9 @@ class Preservativos(Screen):
             color=(0, 0, 0, 1),
             size_hint=(1, 0.2),
         ))
-        
+
+        scroll = ScrollView()
+
         ListaPreservativos = BoxLayout(
             orientation = 'vertical',
             spacing = 10,
