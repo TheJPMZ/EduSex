@@ -22,17 +22,13 @@
                 icon: 'magnify'
                 size_y: 1
         ScrollView:
-            BoxLayout:
-                size_hint_y: None
-                height: 600
+            MDBoxLayout:
+                adaptive_height: True
                 orientation: 'vertical'
                 padding: 8, 0 , 8 , 8
                 margin: 9
                 id: meme
-                Button:
-                    size_hint: 1, None
-                    size_y: 100
-                    text: "memes"
+                spacing: 5
                 Button:
                     size_hint: 1, None
                     size_y: 100

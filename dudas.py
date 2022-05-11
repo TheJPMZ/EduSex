@@ -38,7 +38,12 @@ class Dudas(Screen):
                 Button(
                     size_hint=(1, None),
                     size_y=100,
-                    text=name
+                    text=name,
+                    text_size=(300, None),
+                    background_normal = "",
+                    background_color= (.97, .79, .89),
+                    color = (0,0,0)
+
                 )
             )
 
@@ -54,6 +59,7 @@ class Dudas(Screen):
                         continue
             else:
                 add_item(pregunta)
+
 
 
 
