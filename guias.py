@@ -14,14 +14,6 @@ dicGuias = {
     "Consentimiento": [25,"info_con"],
     "Preservativos": [25,"info_pre"],
     "Planificacion": [25,"info_planf"],
-    "Guia4": 100,
-    "Guia5": 100,
-    "Guia6": 100,
-    "Guia7": 100,
-    "Guia8": 100,
-    "Guia9": 100,
-    "Guia0": 100,
-    "Guia11": 100,
 }
 
 meme = ""

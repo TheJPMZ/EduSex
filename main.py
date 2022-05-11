@@ -57,7 +57,7 @@ class EduSexApp(MDApp):
         sm.add_widget(settings.Settings(name="settings"))
         sm.add_widget(guias.Guias(name="guias"))
         sm.add_widget(preservativos.Preservativos(name="preservativos"))
-        #sm.add_widget(dudas.Dudas(name ="dudas"))
+        sm.add_widget(dudas.Dudas(name ="dudas"))
 
         #Preservativos
         sm.add_widget(anillo.Anillo(name="anillo"))
