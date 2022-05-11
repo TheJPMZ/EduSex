@@ -54,8 +54,6 @@ class Guias(Screen):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        
-        scroll = ScrollView()
 
         box = BoxLayout(
             orientation="vertical",
@@ -67,6 +65,8 @@ class Guias(Screen):
             color=(0, 0, 0, 1),
             size_hint=(1, 0.2),
         ))
+
+        scroll = ScrollView()
 
         InnerStack = StackLayout(
             orientation='lr-tb',
