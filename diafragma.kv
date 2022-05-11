@@ -50,10 +50,11 @@
 
             RoundedButton:
                 text: 'Regresar'
-                on_press: root.save_gender("M")
+                on_press: root.manager.current = 'preservativos'
             RoundedButton:
                 text: 'Agregar'
-                on_press: root.save_gender("F")
+                id: 'btnDiafragma'
+                on_press: root.manager.current = 'carrito'
 
 <RoundedButton@Button>
 	background_color: (1,1,1,0)
