@@ -53,6 +53,69 @@ class Preservativos(Screen):
             on_press = lambda x: returntoguias()
         ))
 
+        box = BoxLayout(
+            orientation="vertical",
+        )
+
+        box.add_widget(Label(
+            text="Preservativos",
+            font_size = 50,
+            color=(0, 0, 0, 1),
+            size_hint=(1, 0.2),
+        ))
+
+        ListaPreservativos = BoxLayout(
+            orientation = 'vertical',
+            spacing = 10,
+            padding = (20, 10, 20, 20),
+            size_hint_y = None,
+            height = (len(lista)*110+10)
+        )
+
+        for x,y in lista.items():
+            b = BoxLayout(
+                orientation= 'horizontal',
+                spacing= 5,
+                size_hint= (1, None),
+                height= 100
+            )
+            b.add_widget(Image(
+                source = y[0],
+
+                size = (100, 100)
+            ))
+
+            def meme (x):
+                global meme
+                meme = x
+                self.goanillo(x)
+
+            boton = RoundedButton(
+                text= x,
+                size_hint = (2, 1),
+                on_press = meme
+
+            )
+
+
+            b.add_widget(boton)
+            memes.append(boton)
+            ListaPreservativos.add_widget(b)
+
+        scroll.add_widget(ListaPreservativos)
+
+        box.add_widget(scroll)
+
+        self.add_widget(box)
+
+    def goanillo(self, *args):
+        global meme
+        print(args)
+        print("Meme>",meme)
+        print(memes.index(meme))
+
+
+        self.manager.current = list(lista.values())[memes.index(meme)][1]
 
         scroll = ScrollView()
 

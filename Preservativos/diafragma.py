@@ -8,5 +8,5 @@ Builder.load_file('Preservativos/diafragma.kv')
 
 
 class Diafragma(Screen):
-
+    
     pass

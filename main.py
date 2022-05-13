@@ -96,6 +96,20 @@ class EduSexApp(MDApp):
         sm.add_widget(showdudas.ShowDudas(name = "showdudas"))
         return sm
 
+        #Guias
+        sm.add_widget(PguiasCon.PlantillaCon(name="guia_con"))
+        sm.add_widget(PguiasPre.PlantillaPre(name="guia_pre"))
+        sm.add_widget(planF.PlanF(name="guia_planf"))
+
+        # Informacion
+        sm.add_widget(PinfoCon.InfoCon(name="info_con"))
+        sm.add_widget(PinfoPre.InfoP(name="info_pre"))
+        sm.add_widget(planFInfo.PlanFInfo(name="info_planf"))
+
+        # Carrito
+        sm.add_widget(carrito.Carrito(name="carrito"))
+
+        return sm
 
 if __name__ == '__main__':
     EduSexApp().run()
