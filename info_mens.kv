@@ -1,0 +1,57 @@
+#:import utils kivy.utils
+
+<InfoMens>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        AnchorLayout:
+            size_hint: 1, .6
+            Image:
+                size_hint: .5, .5
+                source: 'images/Mens.png'
+                
+        Label:
+            text: 'Consentimiento'
+            font_size: '25sp'
+            color: 0,0,0,1
+            size_hint: 1, .2
+
+        ScrollView:
+            #size_hint: 3, .3
+            do_scroll_x: False
+            do_scroll_y: True
+
+            Label:
+                size_hint_y: None
+                text_size: self.width, None
+                height: self.texture_size[1]
+                size_hint_y: None
+                color: 0,0,0,1
+                padding: 50, 50
+                text: 
+                    'La menstruación\n\n La menstruación o período, es el sangrado vaginal normal que ocurre como parte del ciclo mensual de la mujer. Todos los meses, su cuerpo se prepara para un posible embarazo. Si esto no ocurre, el útero, se desprende de su recubrimiento. Esta es la sangre menstrual, que sale del cuerpo a través de la vagina. Esta sangre es parte sangre y parte tejido del interior del útero.\n\nLos períodos suelen comenzar alrededor de los 12 años y continúan hasta la menopausia, cerca de los 51 años. La mayoría de las menstruaciones dura entre tres y cinco días. Además del sangrado, usted puede sentir\n\nDolores o calambres abdominales o pélvicos\n\nDolor de espalda baja\n\nHinchazón y dolor en los senos\n\nAntojo de algún alimento en particular\n\nIrritabilidad y cambios de humor\n\nDolor de cabeza y cansancio'
+        BackgroundBoxLayout:
+            orientation: 'horizontal'
+            size_hint: 1,.2 
+            Button:
+                text: 'Regresar'
+                size_hint: .5,0.5
+                on_press: root.manager.current = "guias"
+                    
+            Button:
+                text: 'Evaluar'
+                size_hint:.5,0.5
+                on_press: root.manager.current = "PlantillaMens"
+
+               
+<RoundedButton@Button>
+	background_color: (1,1,1,0)
+	background_normal: ''
+    color: 0,0,0,1
+	canvas.before:
+		Color:
+			rgb: utils.get_color_from_hex('#F8CAE2')
+		RoundedRectangle:
+			size: .6, .6
+			pos: self.pos
+			radius: [10]
