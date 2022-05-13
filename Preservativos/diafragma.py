@@ -4,8 +4,9 @@ from kivy.core.window import Window
 from kivy.lang import Builder
 from kivy.uix.screenmanager import Screen
 
-Builder.load_file('inyeccion.kv')
+Builder.load_file('Preservativos/diafragma.kv')
 
-class Inyeccion(Screen):
+
+class Diafragma(Screen):
 
     pass

@@ -9,16 +9,17 @@ import menu
 import settings
 import genero
 import guias
-import pastillas
-import condones
-import diafragma
-import inyeccion
-import anillo
-import parche
-import condonI
-import esponja
-import capuchon
-import espermicida
+
+from Preservativos import pastillas
+from Preservativos import condones
+from Preservativos import diafragma
+from Preservativos import inyeccion
+from Preservativos import anillo
+from Preservativos import parche
+from Preservativos import condonI
+from Preservativos import esponja
+from Preservativos import capuchon
+from Preservativos import espermicida
 import PguiasMens
 import PguiasITS
 
@@ -73,6 +74,7 @@ class EduSexApp(MDApp):
         sm.add_widget(esponja.Esponja(name="esponja"))
         sm.add_widget(inyeccion.Inyeccion(name="inyeccion"))
         sm.add_widget(parche.Parche(name="parche"))
+        sm.add_widget(pastillas.Pastillas(name="pastillas"))
 
         #Guias
         sm.add_widget(PguiasCon.PlantillaCon(name="guia_con"))

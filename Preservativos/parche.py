@@ -4,9 +4,9 @@ from kivy.core.window import Window
 from kivy.lang import Builder
 from kivy.uix.screenmanager import Screen
 
-Builder.load_file('condonI.kv')
+Builder.load_file('Preservativos/parche.kv')
 
 
-class CondonI(Screen):
+class Parche(Screen):
 
     pass

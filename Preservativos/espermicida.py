@@ -4,9 +4,8 @@ from kivy.core.window import Window
 from kivy.lang import Builder
 from kivy.uix.screenmanager import Screen
 
-Builder.load_file('esponja.kv')
+Builder.load_file('Preservativos/espermicida.kv')
 
-
-class Esponja(Screen):
+class Espermicida(Screen):
 
     pass

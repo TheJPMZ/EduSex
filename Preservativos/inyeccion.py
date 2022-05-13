@@ -4,9 +4,8 @@ from kivy.core.window import Window
 from kivy.lang import Builder
 from kivy.uix.screenmanager import Screen
 
-Builder.load_file('parche.kv')
+Builder.load_file('Preservativos/inyeccion.kv')
 
-
-class Parche(Screen):
+class Inyeccion(Screen):
 
     pass

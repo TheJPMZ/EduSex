@@ -4,9 +4,8 @@ from kivy.core.window import Window
 from kivy.lang import Builder
 from kivy.uix.screenmanager import Screen
 
-Builder.load_file('pastillas.kv')
+Builder.load_file('Preservativos/anillo.kv')
 
-
-class Pastillas(Screen):
+class Anillo(Screen):
 
     pass
