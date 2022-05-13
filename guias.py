@@ -7,6 +7,7 @@ from kivy.uix.stacklayout import StackLayout
 from kivy.uix.label import Label
 from kivy.uix.scrollview import ScrollView
 from math import ceil
+from kivymd.uix.button import MDIconButton
 
 Builder.load_file('guias.kv')
 
@@ -46,6 +47,18 @@ class Guias(Screen):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
+
+        def returntoguias():
+            self.manager.current = "menu"
+
+        self.add_widget(MDIconButton(
+            icon = 'less-than',
+            size = (1,1),
+            text_color = (0, 0, 0, 1),
+            x = 0,
+            y = 575,
+            on_press = lambda x: returntoguias()
+        ))
 
         box = BoxLayout(
             orientation="vertical",
