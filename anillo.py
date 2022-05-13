@@ -1,13 +1,14 @@
-from kivy.lang import Builder
-from kivy.uix.screenmanager import Screen
+from kivy.app import App
+from kivy.uix.gridlayout import GridLayout
+from kivy.uix.button import Button
+from kivy.uix.scrollview import ScrollView
 from kivy.core.window import Window
+from kivy.uix.screenmanager import Screen, ScreenManager
+from kivy.properties import StringProperty, ObjectProperty
 from kivy.lang import Builder
-from kivy.uix.screenmanager import Screen
+from kivy.clock import Clock
 
 Builder.load_file('anillo.kv')
-Window.clearcolor = (1, 1, 1, 1)
-Window.size = (1080/3,1920/3)
 
 class Anillo(Screen):
-
     pass

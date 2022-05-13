@@ -1,6 +1,8 @@
 from cgitb import text
 from pydoc import describe
+from tkinter import Variable
 from turtle import heading
+from typing import Tuple
 
 from kivy.lang import Builder
 from kivy.uix.screenmanager import Screen
@@ -14,112 +16,54 @@ from kivy.uix.recycleview import RecycleView
 from numpy import size
 from kivy.core.window import Window
 from math import ceil
+from kivy.uix.checkbox import CheckBox
+import json
 
 Builder.load_file('carrito.kv')
-Window.clearcolor = (1, 1, 1, 1)
-Window.size = (1080/3,1920/3)
 
-lista = {"Anillo": ["""images/anillo.png""","anillo"],
-         "Capuchon": ["images/capuchon.png","capuchon"],
-         "Condon Femenino" : ["images/cinterno.png","cinterno"],
-         "Condon Masculino": ["images/condon.png","condones"],
-         "Diafragma": ["images/diafragma.png","diafragma"],
-         "Espermicida": ["images/espermicida.png","espermicida"],
-         "Esponja": ["images/esponja.png","esponja"],
-         "Inyeccion": ["images/inyeccion.png","inyeccion"],
-         "Parche": ["images/parche.png","parche"]
-         }
+productos = {}
 
-meme = ""
-memes = []
+with open('productos.json', 'r', encoding="utf_8") as f:
+    productos = json.load(f)
 
 class RoundedButton(Button):
     pass
 
-class Tile(RoundedButton):
-    pass
-
-class BackgroundLabel(Label):
-    pass
+global numero
 
 class Carrito(Screen):
 
+    def set_list(self, text="", search=False):
+        def add_item(name):
+            self.ids.product.add_widget(
+                Button(
+                    size_hint=(1, None),
+                    size_y=100,
+                    text=name,
+                    text_size=(300, None),
+                    background_normal = "",
+                    background_color= (.97, .79, .89),
+                    color = (0,0,0)
+
+                )
+            )
+
+        self.ids.product.clear_widgets()
+        for pregunta in productos.keys():
+            if search:
+                if text in pregunta:
+                    add_item(pregunta)
+                    continue
+                for y in productos[pregunta].get("tags"):
+                    if text in y:
+                        add_item(pregunta)
+                        continue
+            else:
+                add_item(pregunta)
+
     def __init__(self, **kw):
-        super(Carrito,self).__init__(**kw)
+        super().__init__(**kw)
 
-        scroll = ScrollView(
-         
-            padding=( 50, 20, 50, 20)
-        )
+        self.set_list()
 
-        box = BoxLayout(
-            orientation="vertical",
-            padding=(50,200,50,0)
-        )
-
-        box.add_widget(Label(
-            text="",
-            font_size = 50,
-            padding=(50,50),
-            color=(0, 0, 0, 1),
-            size_hint=(1, 0.2),
-        ))
-
-        ListaPreservativos = BoxLayout(
-            orientation = 'vertical',
-            spacing = 10,
-            padding = (20, 200, 20, 20),
-            size_hint_y = None,
-            height = (len(lista)*110+10)
-        )
-
-        for x,y in lista.items():
-            b = BoxLayout(
-                orientation= 'horizontal',
-                spacing= 5,
-                size_hint= (1, None),
-                height= 100
-            )
-            b.add_widget(Image(
-                source = y[0],
-
-                size = (100, 100)
-            ))
-
-            def meme (x):
-                global meme
-                meme = x
-                self.goanillo(x)
-
-            description = BackgroundLabel(
-                text= x,
-                size_hint = (2, 1),
-                on_press = meme
-
-            )
-
-            boton = RoundedButton(
-                text= "Eliminar",
-                size_hint = (1, 1),
-                on_press = meme
-
-            )
-            b.add_widget(description)
-            b.add_widget(boton)
-            memes.append(boton)
-            ListaPreservativos.add_widget(b)
-
-        scroll.add_widget(ListaPreservativos)
-
-        box.add_widget(scroll)
-
-        self.add_widget(box)
-
-    def goanillo(self, *args):
-        global meme
-        print(args)
-        print("Meme>",meme)
-        print(memes.index(meme))
-
-        self.manager.current = list(lista.pop.values())[memes.index(meme)][1]
     pass

@@ -24,13 +24,28 @@
 
         BoxLayout:
             orientation: 'vertical'
-  
-            color: 0,0,0,1
-            canvas.before:
-                RoundedRectangle:
-                    size: self.size
-                    pos: self.pos
-                    radius: [10]
+            spacing: 10
+            
+            BoxLayout:
+                orientation: 'horizontal'
+                size_hint_y: .1
+                spacing: 10
+            
+            ScrollView:
+                MDBoxLayout:
+                    adaptive_height: True
+                    orientation: 'vertical'
+                    padding: 8, 0 , 8 , 8
+                    margin: 9
+                    id: product
+                    spacing: 5
+                    Label:
+                        size_hint_y: None
+                        color: 0,0,0,1
+                        text_size: self.width, None
+                        height: self.texture_size[1]
+                        padding: 50, 50
+                        text: 'product'
 
         BoxLayout:
             orientation: 'horizontal'
@@ -41,7 +56,8 @@
 
             RoundedButton:
                 text: 'Regresar'
-                on_press: root.manager.current = 'preservativos'
+                on_press: root.manager.current = 'menu'
+           
             RoundedButton:
                 text: 'Comprar'
                 on_press: root.save_gender("F")
@@ -54,7 +70,7 @@
 		Color:
 			rgb: utils.get_color_from_hex('#F8CAE2')
 		RoundedRectangle:
-			size: .6, .6
+			size: self.size
 			pos: self.pos
 			radius: [10]
 

@@ -50,6 +50,7 @@ def get_data():
         return False
 
 class EduSexApp(MDApp):
+    
     def build(self):
         sm = ScreenManager()
         if not get_data():
