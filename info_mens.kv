@@ -11,7 +11,7 @@
                 source: 'images/Mens.png'
                 
         Label:
-            text: 'Consentimiento'
+            text: 'Menstruacion'
             font_size: '25sp'
             color: 0,0,0,1
             size_hint: 1, .2
@@ -44,14 +44,3 @@
                 on_press: root.manager.current = "PlantillaMens"
 
                
-<RoundedButton@Button>
-	background_color: (1,1,1,0)
-	background_normal: ''
-    color: 0,0,0,1
-	canvas.before:
-		Color:
-			rgb: utils.get_color_from_hex('#F8CAE2')
-		RoundedRectangle:
-			size: .6, .6
-			pos: self.pos
-			radius: [10]
