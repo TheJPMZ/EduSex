@@ -1,6 +1,4 @@
 from kivymd.app import MDApp
-import imp
-from kivy.app import App
 from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager
 from kivy.uix.widget import Widget
@@ -25,6 +23,8 @@ import espermicida
 #import preservativos
 import preservativos
 import dudas
+import showdudas
+
 
 import PguiasCon
 import PguiasPre
@@ -81,6 +81,8 @@ class EduSexApp(MDApp):
         sm.add_widget(planFInfo.PlanFInfo(name="info_planf"))
 
 
+
+        sm.add_widget(showdudas.ShowDudas(name = "showdudas"))
         return sm
 
 
