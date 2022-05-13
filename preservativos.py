@@ -10,6 +10,7 @@ from kivy.uix.label import Label
 from kivy.uix.scrollview import ScrollView
 from kivy.uix.image import Image
 from kivy.uix.recycleview import RecycleView
+from kivymd.uix.button import MDIconButton
 from numpy import size
 
 Builder.load_file('preservativos.kv')
@@ -39,6 +40,19 @@ class Preservativos(Screen):
 
     def __init__(self, **kw):
         super(Preservativos,self).__init__(**kw)
+
+        def returntoguias():
+            self.manager.current = "menu"
+
+        self.add_widget(MDIconButton(
+            icon = 'less-than',
+            size = (1,1),
+            text_color = (0, 0, 0, 1),
+            x = 0,
+            y = 575,
+            on_press = lambda x: returntoguias()
+        ))
+
 
         scroll = ScrollView()
 

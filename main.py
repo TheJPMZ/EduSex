@@ -6,7 +6,6 @@ from kivy.core.window import Window
 
 
 import menu
-import settings
 import genero
 import guias
 
@@ -59,7 +58,7 @@ class EduSexApp(MDApp):
         if not get_data():
             sm.add_widget(genero.Genero(name="genero"))
         sm.add_widget(menu.MainMenu(name="menu"))
-        sm.add_widget(settings.Settings(name="settings"))
+
         sm.add_widget(guias.Guias(name="guias"))
         sm.add_widget(preservativos.Preservativos(name="preservativos"))
         sm.add_widget(dudas.Dudas(name ="dudas"))
