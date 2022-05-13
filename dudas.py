@@ -13,6 +13,7 @@ from kivy.uix.image import Image
 from kivy.uix.recycleview import RecycleView
 from kivymd.uix.expansionpanel import MDExpansionPanel, MDExpansionPanelLabel
 from kivymd.uix.boxlayout import MDBoxLayout
+
 import json
 
 informacion = {}
@@ -20,17 +21,28 @@ informacion = {}
 with open('informacion.json', 'r', encoding="utf_8") as f:
     informacion = json.load(f)
 
-
-
-
 Builder.load_file('dudas.kv')
 
 
 
 
-
-
 class Dudas(Screen):
+
+    def choose_info(self,title):
+        print(title)
+        new_dicc = {
+            "title": title,
+            "info": informacion.get(title).get("info"),
+        }
+
+        image = informacion.get(title).get("image")
+        if image:
+            new_dicc["image"] = image
+
+        with open('innerlog.json', 'w', encoding="utf_8") as f:
+            f.write(json.dumps(new_dicc))
+
+        self.manager.current = "showdudas"
 
     def set_list(self, text="", search=False):
         def add_item(name):
@@ -42,8 +54,8 @@ class Dudas(Screen):
                     text_size=(300, None),
                     background_normal = "",
                     background_color= (.97, .79, .89),
-                    color = (0,0,0)
-
+                    color = (0,0,0),
+                    on_press = lambda x: self.choose_info(name)
                 )
             )
 
