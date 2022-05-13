@@ -71,6 +71,7 @@ class EduSexApp(MDApp):
         sm.add_widget(esponja.Esponja(name="esponja"))
         sm.add_widget(inyeccion.Inyeccion(name="inyeccion"))
         sm.add_widget(parche.Parche(name="parche"))
+        sm.add_widget(pastillas.Pastillas(name="pastilla"))
 
         #Guias
         sm.add_widget(PguiasCon.PlantillaCon(name="guia_con"))
