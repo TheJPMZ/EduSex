@@ -33,20 +33,48 @@
             
             ScrollView:
                 MDBoxLayout:
-                    adaptive_height: True
                     orientation: 'vertical'
-                    padding: 8, 0 , 8 , 8
-                    margin: 9
+                    adaptive_height: True
+                    padding: 50, 0 , 50 , 8
                     id: product
-                    spacing: 5
+                    radius: .5
                     Label:
-                        size_hint_y: None
+                        size_hint: 0, 1
+                        size_y: 100
+                        text: "product"
+                        radius: .5
                         color: 0,0,0,1
-                        text_size: self.width, None
-                        height: self.texture_size[1]
-                        padding: 50, 50
-                        text: 'product'
+                    
+            MDBoxLayout:
+                orientation: 'horizontal'
+                adaptive_height: True
+                id: contador
+                spacing: 10
+                padding: 300, 0, 300, 50
+                Label:
+                    size_hint: 0.5, 1
+                    size_y: 100
+                    text: "1"
+                    radius: .5
+                    color: 0,0,0,1
 
+            BoxLayout:
+                orientation: 'horizontal'
+                spacing: 20
+                #derecha arriba izquierda abajo
+                padding: 250, 0, 250, 0
+                size_hint: 1, .2
+
+                Button:
+                    id: btnMenos
+                    background_normal: 'images/minus.png'
+                    on_press: quitar()
+           
+                Button:
+                    id: btnMas
+                    background_normal: 'images/plus.png'
+                    on_press: root.agregar()
+                
         BoxLayout:
             orientation: 'horizontal'
             spacing: 20
