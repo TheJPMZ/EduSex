@@ -25,15 +25,3 @@
             size_hint: 1, .5
 
 
-<BackgroundColor@Widget>
-    background_color: 1, 1, 1, 1
-    canvas.before:
-        Color:
-            rgba: root.background_color
-        RoundedRectangle:
-			size: 1, .1
-			pos: self.pos
-			radius: [10]
-<BackgroundLabel@Label+BackgroundColor>
-    background_color: 0, 0, 0, 0
-    color: 0,0,0,1

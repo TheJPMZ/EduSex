@@ -34,7 +34,7 @@ import planFInfo
 import planF
 
 
-Window.clearcolor = (1, 1, 1, 1)
+Window.clearcolor = (.87, .95, 1, 1)
 Window.size = (1080/3,1920/3)
 
 #Check if there is a file named data.txt with a string, return the string

@@ -1,15 +1,3 @@
 #:import utils kivy.utils
 
 
-<RoundedButton@Button>
-	background_color: (1,1,1,0)
-	background_normal: ''
-    color: 0,0,0,1
-	canvas.before:
-		Color:
-			rgb: utils.get_color_from_hex('#F8CAE2')
-		RoundedRectangle:
-			size: self.size
-			pos: self.pos
-			radius: [10]
-

@@ -1,7 +1,7 @@
 #:import utils kivy.utils
 
 <MainMenu>:
-    background_color: 1,1,1,1
+    background_color: .87, .95, 1, 1
     BoxLayout:
         orientation: 'vertical'
         AnchorLayout:
@@ -48,12 +48,28 @@
 <RoundedButton@Button>
 	background_color: (1,1,1,0)
 	background_normal: ''
-    color: 0,0,0,1
+    color: 1,1,1,1
 	canvas.before:
 		Color:
-			rgb: utils.get_color_from_hex('#F8CAE2')
+			rgb: utils.get_color_from_hex('#413C58')
 		RoundedRectangle:
 			size: self.size
 			pos: self.pos
 			radius: [10]
 
+<BackgroundColor@Widget>
+    background_color: .87, .95, 1, 1
+    canvas.before:
+        Color:
+            rgba: root.background_color
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+<BackgroundLabel@Label+BackgroundColor>
+    background_color: 0, 0, 0, 0
+    color: 0,0,0,1
+
+<BackgroundBoxLayout@BoxLayout+BackgroundColor>
+    background_color: 0, 0, 0, 0
+    color: 0,0,0,1
