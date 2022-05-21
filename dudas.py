@@ -24,6 +24,10 @@ dicGuias = {
 
 meme = ""
 memes = []
+lista = [{"Tags": "Masturbacion",
+         "Tags": "Femenino",
+         "Tags": "Fertilidad"
+        }]
 
 informacion = {}
 
@@ -119,13 +123,13 @@ class Dudas(Screen):
 
         for tag in informacion.keys():
             for x in informacion[tag].get("tags"):
-                if x not in memes:
+                if not x in lista:
                     b = Tile(text=x,
                             on_press=meme,
                             font_size=25,
                             size_hint=(0.3, 0.05)
                         )
-                    memes.append(b)
+                    lista.append(x)
                     InnerStack.add_widget(b)
                     
         scroll.add_widget(InnerStack)
