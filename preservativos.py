@@ -13,8 +13,6 @@ from kivy.uix.recycleview import RecycleView
 from kivymd.uix.button import MDIconButton
 from numpy import size
 
-Builder.load_file('preservativos.kv')
-
 lista = {"Anillo": [r"""images\anillo.png""","anillo"],
          "Capuchon": ["images\capuchon.png","capuchon"],
          "Condon Femenino" : ["images\cinterno.png","cinterno"],

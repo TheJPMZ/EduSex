@@ -48,11 +48,15 @@
             padding: 50, 30, 50, 30
             size_hint: 1, .2
 
-            RoundedButton:
+            Button:
                 text: 'Regresar'
                 on_press: root.manager.current = 'preservativos'
-            RoundedButton:
+                size_hint_y: None
+                height: 25
+            Button:
                 text: 'Agregar'
                 id: 'btnAnillo'
                 on_press: root.manager.current = 'carrito'
+                size_hint_y: None
+                height: 25
 

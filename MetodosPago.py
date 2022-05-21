@@ -18,7 +18,6 @@ from kivy.uix.label import Label
 from kivy.graphics import Color, RoundedRectangle, Rectangle
 from numpy import source, spacing
 
-Builder.load_file('MetodosPago.kv')
 
 lista = {"Anillo": ["""images\anillo.png""","anillo"],
          "Capuchon": ["images\capuchon.png","capuchon"],
