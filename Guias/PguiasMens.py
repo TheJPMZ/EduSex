@@ -1,7 +1,7 @@
 from kivy.lang import Builder
 from kivy.uix.screenmanager import Screen
 
-Builder.load_file('PguiasMens.kv')
+Builder.load_file('Guias/PguiasMens.kv')
 
 class PlantillaMens(Screen):
     index = ""

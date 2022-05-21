@@ -1,9 +1,9 @@
 from kivy.lang import Builder
 from kivy.uix.screenmanager import Screen
 
-Builder.load_file('PguiasITS.kv')
+Builder.load_file('Guias/PguiasCon.kv')
 
-class PlantillaITS(Screen):
+class PlantillaCon(Screen):
     index = ""
     def save_gender(self, ind):
         self.index= ind
