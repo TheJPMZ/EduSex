@@ -9,8 +9,6 @@ from kivy.uix.scrollview import ScrollView
 from math import ceil
 from kivymd.uix.button import MDIconButton
 
-Builder.load_file('guias.kv')
-
 dicGuias = {
     "Consentimiento": [25,"info_con"],
     "Preservativos": [25,"info_pre"],

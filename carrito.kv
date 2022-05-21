@@ -88,35 +88,4 @@
            
             RoundedButton:
                 text: 'Comprar'
-                on_press: root.save_gender("F")
-
-<RoundedButton@Button>
-	background_color: (1,1,1,0)
-	background_normal: ''
-    color: 0,0,0,1
-	canvas.before:
-		Color:
-			rgb: utils.get_color_from_hex('#F8CAE2')
-		RoundedRectangle:
-			size: self.size
-			pos: self.pos
-			radius: [10]
-
-<BackgroundColor@Widget>
-    background_color: 1, 1, 1, 1
-    canvas.before:
-        Color:
-            rgba: root.background_color
-        RoundedRectangle:
-            size: self.size
-            pos: self.pos
-            radius: [10]
-
-<BackgroundLabel@Label+BackgroundColor>
-    background_color: 0, 0, 0, 0
-    color: 0,0,0,1
-
-<Tile@RoundedButton>
-	size_hint: None, None,
-    size: 650, 150,
-    font_size: '20sp'
+                on_press: root.manager.current = "metodospago"

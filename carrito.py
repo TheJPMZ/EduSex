@@ -1,17 +1,10 @@
-from cgitb import text
-from curses import color_content
-from pydoc import describe
-from tkinter import Variable
-from turtle import heading
-from typing import Tuple
-
 from kivy.lang import Builder
 from kivy.uix.screenmanager import Screen
 from kivy.uix.button import Button
 from kivy.uix.label import Label
 import json
-import anillo
-import capuchon
+from Preservativos import anillo
+from Preservativos import capuchon
 
 Builder.load_file('carrito.kv')
 

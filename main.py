@@ -19,23 +19,28 @@ from Preservativos import condonI
 from Preservativos import esponja
 from Preservativos import capuchon
 from Preservativos import espermicida
-import PguiasMens
-import PguiasITS
 
-#import preservativos
 import preservativos
 import dudas
 import showdudas
 
 
-import PguiasCon
-import PguiasPre
-import PinfoCon
-import PinfoPre
-import planFInfo
-import planF
-import info_its
-import info_mens
+from Guias import PguiasCon
+from Guias import PguiasPre
+from Guias import PguiasMens
+from Guias import PguiasITS
+from Guias import planF
+
+from Info import PinfoCon
+from Info import PinfoPre
+from Info import planFInfo
+from Info import info_its
+from Info import info_mens
+
+import carrito
+
+import MetodosPago
+
 
 
 Window.clearcolor = (.87, .95, 1, 1)
@@ -94,7 +99,6 @@ class EduSexApp(MDApp):
 
 
         sm.add_widget(showdudas.ShowDudas(name = "showdudas"))
-        return sm
 
         #Guias
         sm.add_widget(PguiasCon.PlantillaCon(name="guia_con"))
@@ -108,6 +112,8 @@ class EduSexApp(MDApp):
 
         # Carrito
         sm.add_widget(carrito.Carrito(name="carrito"))
+
+        sm.add_widget(MetodosPago.Pago(name="metodospago"))
 
         return sm
 
