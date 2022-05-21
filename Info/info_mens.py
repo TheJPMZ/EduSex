@@ -1,14 +1,14 @@
 from kivy.lang import Builder
 from kivy.uix.screenmanager import Screen
 
-Builder.load_file('PinfoCon.kv')
+Builder.load_file('Info/info_mens.kv')
 
 
 
 
-class InfoCon(Screen):
+class InfoMens(Screen):
     def cambiar(self):
-        self.manager.current = "PlantillaCon"
+        self.manager.current = "Plantilla"
 
         
         pass

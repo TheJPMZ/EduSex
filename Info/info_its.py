@@ -1,7 +1,7 @@
 from kivy.lang import Builder
 from kivy.uix.screenmanager import Screen
 
-Builder.load_file('info_its.kv')
+Builder.load_file('Info/info_its.kv')
 
 
 
