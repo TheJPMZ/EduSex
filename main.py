@@ -37,6 +37,9 @@ import planF
 import info_its
 import info_mens
 
+import carrito
+import MetodosPago
+import filtrar
 
 Window.clearcolor = (.87, .95, 1, 1)
 Window.size = (1080/3,1920/3)
@@ -89,12 +92,9 @@ class EduSexApp(MDApp):
         sm.add_widget(planFInfo.PlanFInfo(name="info_planf"))
         sm.add_widget(info_its.InfoITS(name="info_its"))
         sm.add_widget(info_mens.InfoMens(name="info_mens"))
-        
-
-
 
         sm.add_widget(showdudas.ShowDudas(name = "showdudas"))
-        return sm
+        
 
         #Guias
         sm.add_widget(PguiasCon.PlantillaCon(name="guia_con"))
@@ -108,6 +108,10 @@ class EduSexApp(MDApp):
 
         # Carrito
         sm.add_widget(carrito.Carrito(name="carrito"))
+        sm.add_widget(MetodosPago.Pago(name="Pago"))
+
+        # Filtrar
+        sm.add_widget(filtrar.Filtrar(name="filtrar"))
 
         return sm
 

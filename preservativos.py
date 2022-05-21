@@ -15,16 +15,16 @@ from numpy import size
 
 Builder.load_file('preservativos.kv')
 
-lista = {"Anillo": [r"""images\anillo.png""","anillo"],
-         "Capuchon": ["images\capuchon.png","capuchon"],
-         "Condon Femenino" : ["images\cinterno.png","cinterno"],
-         "Condon Masculino": ["images\condon.png","condones"],
-         "Diafragma": ["images\diafragma.png","diafragma"],
-         "Espermicida": ["images\espermicida.png","espermicida"],
-         "Esponja": ["images\esponja.png","esponja"],
-         "Inyeccion": ["images\inyeccion.png","inyeccion"],
-         "Parche": ["images\parche.png","parche"],
-         "Pastillas":["images\pastillas.png","pastillas"]
+lista = {"Anillo": ["""images/anillo.png""","anillo"],
+         "Capuchon": ["images/capuchon.png","capuchon"],
+         "Condon Femenino" : ["images/cinterno.png","cinterno"],
+         "Condon Masculino": ["images/condon.png","condones"],
+         "Diafragma": ["images/diafragma.png","diafragma"],
+         "Espermicida": ["images/espermicida.png","espermicida"],
+         "Esponja": ["images/esponja.png","esponja"],
+         "Inyeccion": ["images/inyeccion.png","inyeccion"],
+         "Parche": ["images/parche.png","parche"],
+         "Pastilla": ["images/pastillas.png","pastilla"]
          }
 
 meme = ""
@@ -43,6 +43,9 @@ class Preservativos(Screen):
 
         def returntoguias():
             self.manager.current = "menu"
+
+        scroll = ScrollView()
+
 
         self.add_widget(MDIconButton(
             icon = 'less-than',

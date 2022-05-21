@@ -10,8 +10,6 @@ from kivy.uix.screenmanager import Screen
 from kivy.uix.button import Button
 from kivy.uix.label import Label
 import json
-import anillo
-import capuchon
 
 Builder.load_file('carrito.kv')
 
