@@ -62,6 +62,20 @@ class Dudas(Screen):
         self.manager.current = "showdudas"
 
     def set_list(self, text="", search=False):
+
+        box = BoxLayout(
+            orientation="vertical",
+        )
+
+        box.add_widget(Label(
+            text="",
+            font_size = 100,
+            color=(0, 0, 0, 1),
+            size_hint=(1, 0.1),
+        ))
+
+        scroll = ScrollView()
+
         def add_item(name):
             self.ids.meme.add_widget(
                 Button(
@@ -89,9 +103,11 @@ class Dudas(Screen):
             else:
                 add_item(pregunta)
 
-    def __init__(self, **kw):
-        super().__init__(**kw)
+        box.add_widget(scroll)
 
+        self.add_widget(box)
+
+    def tags (self, search=False):
         box = BoxLayout(
             orientation="vertical",
         )
@@ -113,8 +129,6 @@ class Dudas(Screen):
         )
 
         print(len(dicGuias))
-
-        self.set_list()
 
         def meme(x):
             global meme
@@ -138,6 +152,8 @@ class Dudas(Screen):
 
         self.add_widget(box)
 
+        
+
     def recor(self, *args):
         global meme
         print(args)
@@ -146,6 +162,12 @@ class Dudas(Screen):
 
 
         self.manager.current = list(dicGuias.values())[memes.index(meme)][1]
+
+
+    def __init__(self, **kw):
+        super().__init__(**kw)
+        self.set_list()
+        self.tags()
 
     
     pass

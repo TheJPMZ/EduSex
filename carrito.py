@@ -5,6 +5,9 @@ from kivy.uix.label import Label
 import json
 from Preservativos import anillo
 from Preservativos import capuchon
+from kivy.core.window import Window
+
+Window.clearcolor = (.0, .70, 67, 1)
 
 Builder.load_file('carrito.kv')
 
