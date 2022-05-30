@@ -6,7 +6,7 @@ Builder.load_file('Guias/PguiasITS.kv')
 
 class PlantillaITS(Screen):
     buenas = 0
-    res = ['F', 'F', 'F', 'F', 'V']
+    res = ['V', 'V', 'F', 'V', 'F']
     comp = []
     def save_gender(self, respuesta, index):
         try:
