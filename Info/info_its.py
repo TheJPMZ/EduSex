@@ -8,7 +8,7 @@ Builder.load_file('Info/info_its.kv')
 
 class InfoITS(Screen):
     def cambiar(self):
-        self.manager.current = "PlantillaCon"
+        self.manager.current = "PlantillaITS"
 
         
         pass
