@@ -19,6 +19,6 @@ class PlantillaCon(Screen):
             for i in range(5):
                 if self.res[i] == self.comp[i]:
                     self.buenas += 1
-        ganar(self.buenas, 'ITS')
+        ganar(self.buenas, 'Consentimiento')
         pass
     pass
