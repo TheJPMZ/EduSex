@@ -18,9 +18,8 @@
                 bold: True
                 text: 'Planificación Familiar'
                 font_size: '20sp'
-                color: 0,0,0,1
+                color: 1,1,1,1
                 size_hint: 1, .2
-                background_color: 0.97, 0.79, 0.89, 1
 
         ScrollView:
             do_scroll_x: False
@@ -39,16 +38,15 @@
 
         BoxLayout:
             orientation: 'horizontal'
-            spacing: 20
-            #derecha arriba izquierda abajo
-            padding: 50, 30, 50, 30
-            size_hint: 1, .2
-
-            RoundedButton:
+            size_hint: 1,.2
+            Button:
                 text: 'Regresar'
+                size_hint: .5,0.5
                 on_press: root.manager.current = "guias"
-            RoundedButton:
+
+            Button:
                 text: 'Evaluar'
-                on_press: root.manager.current = "guia_planf"
+                size_hint:.5,0.5
+                on_press: root.manager.current = "guia_pre"
 
 

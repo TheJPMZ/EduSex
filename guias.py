@@ -15,12 +15,6 @@ dicGuias = {
     "Planificacion": [25,"info_planf"],
     "Menstruacion":  [25,"info_mens"],
     "ITS":  [25,"info_its"],
-    "Guia6": 100,
-    "Guia7": 100,
-    "Guia8": 100,
-    "Guia9": 100,
-    "Guia0": 100,
-    "Guia11": 100,
 }
 
 meme = ""
