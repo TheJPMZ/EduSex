@@ -17,6 +17,7 @@ from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.label import Label
 from kivy.graphics import Color, RoundedRectangle, Rectangle
 from numpy import source, spacing
+from CodigoQR import generarCodigoQR
 
 
 
@@ -113,7 +114,10 @@ class Pago(Screen):
 
     def imprimir1(self, *args):
         print("Se eligió pagar con tarjeta de crédito")
+        generarCodigoQR('Tarjeta de crédito', '123', '123')
+        
     
     def imprimir2(self, *args):
         print("Se eligió pagar con efectivo")
-    pass
+        generarCodigoQR('Efectivo', '123', '123')
+

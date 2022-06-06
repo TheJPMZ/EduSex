@@ -5,6 +5,7 @@ import qrcode
 def generarCodigoQR(metodo, codigo, codigo_compra):
     #Genera el codigo QR con la informacion del pedido
     img= qrcode.make(f'método:{metodo}| codigo_usuario:{codigo} | codigo_compra:{codigo_compra}')
-    img.save('Compra.png')
+    img.save('images/Compra.png')
     
-generarCodigoQR('Efectivo', '123456789', '123456789')
+    
+generarCodigoQR('Tarjeta de crédito', '123', '123')

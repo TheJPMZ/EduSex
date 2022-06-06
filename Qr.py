@@ -3,6 +3,7 @@ from turtle import heading, onclick
 
 
 
+
 from kivy.lang import Builder
 from kivy.uix.screenmanager import Screen
 from kivy.uix.button import Button
@@ -38,81 +39,36 @@ class Generator(Screen):
         
         
         lab1 = Label(
-            text="Métodos de pago",
+            text="Código QR",
             font_size = 30,
             color=(0, 0, 0, 1),
             size_hint=(1, 0.2),
         )
         
+        box.add_widget(lab1)
+        
         #Tarjeta de credito o débito
 
-        
         b1 = BoxLayout(
-            orientation= 'horizontal',
-            spacing= 5,
-            size_hint= (0.95, None),
-            height= 100
+            orientation= 'vertical',
         )
-        b1.add_widget(
-            Image(
-                source="images/debito.png",
-                size = (100,100)
-            )
-        )
-        
-        but1 = RoundedButton(
-            text= "Tarjeta de crédito",
-            size_hint = (2, 1),
-            font_size = 20,
-            on_press = self.imprimir1
-            
-        )
-        
-        b1.add_widget(but1)
-        
-        
-        #cash
 
-        b2 = BoxLayout(
-            orientation= 'horizontal',
-            spacing= 5,
-            size_hint= (0.95, None),
-            height= 100
-        )
-        b2.add_widget(
-            Image(
-                source="images/dinero.png",
-                size = (100,100)
+        try:
+            b1.add_widget(
+                Image(
+                    source="images/compra.png",
+                    size = (100,100)
+                )
             )
-        )
+        except:
+           lab2 = Label(
+            text="Código QR",
+            font_size = 30,
+            color=(0, 0, 0, 1),
+            size_hint=(1, 0.2)
+            )
+           b1.add_widget(lab2)
         
-        but2 = RoundedButton(
-            text= "Efectivo",
-            size_hint = (2, 1),
-            font_size = 20,
-            on_press = self.imprimir2
-            
-        )
-        
-        espacio = BoxLayout(
-            size = (self.width, self.height/10)
-        )
-        
-        with lab1.canvas:
-            Color(rgb = (248, 202, 226))
-            Rectangle(size= lab1.size, pos= lab1.pos)
-        
-        b2.add_widget(but2)
-
-        box.add_widget(lab1)
         box.add_widget(b1)
-        box.add_widget(b2)
-        box.add_widget(espacio)
         self.add_widget(box)
-
-    def imprimir1(self, *args):
-        print("Se eligió pagar con tarjeta de crédito")
-    
-    def imprimir2(self, *args):
-        print("Se eligió pagar con efectivo")
-    pass
+        
