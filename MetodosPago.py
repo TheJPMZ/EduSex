@@ -17,21 +17,10 @@ from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.label import Label
 from kivy.graphics import Color, RoundedRectangle, Rectangle
 from numpy import source, spacing
+from CodigoQR import generarCodigoQR
 
 
-lista = {"Anillo": ["""images\anillo.png""","anillo"],
-         "Capuchon": ["images\capuchon.png","capuchon"],
-         "Condon Femenino" : ["images\cinterno.png","cinterno"],
-         "Condon Masculino": ["images\condon.png","condones"],
-         "Diafragma": ["images\diafragma.png","diafragma"],
-         "Espermicida": ["images\espermicida.png","espermicida"],
-         "Esponja": ["images\esponja.png","esponja"],
-         "Inyeccion": ["images\inyeccion.png","inyeccion"],
-         "Parche": ["images\parche.png","parche"]
-         }
 
-meme = ""
-memes = []
 
 class RoundedButton(Button):
     pass
@@ -125,7 +114,13 @@ class Pago(Screen):
 
     def imprimir1(self, *args):
         print("Se eligió pagar con tarjeta de crédito")
+        generarCodigoQR('Tarjeta de crédito', '123', '123')
+        self.manager.current = 'qr'
+        
     
     def imprimir2(self, *args):
         print("Se eligió pagar con efectivo")
-    pass
+        generarCodigoQR('Efectivo', '123', '123')
+        self.manager.current = 'qr'
+
+
