@@ -38,5 +38,48 @@
     "¿Cuál es el mejor anticonceptivo?" : {
         "tags":["Preservativo"],
         "info":"La mejor manera de no quedar embarazada es no tener relaciones sexuales o 'abstinencia'.\nSin embargo, al momento de tener relaciones hay varios métodos, cada uno con sus ventajas y sus desventajas. Entre los que tienen la mayor efectividad se encuentran el DIU y los implantes."
+    },
+    "¿Mi sexo define el género?" : {
+            "tags": ["Género", "Sexo", "Identidad"],
+            "info":"Para nada, el sexo con el que se nace sirve como un indicador pero la forma en la que se expresa el género o la sexualidad es distinta persona por persona y no es una característica que se puede definir de una manera universal."
+        },
+    "¿Qué es el género?" : {
+            "tags": ["Género", "Sexo", "Identidad"],
+            "info": "Es una construcción social la cual usualmente es utilizada para diferenciar o clasificar a las personas dentro de grupos refiriendose a su sexo biológico"
+        },
+    "¿Está mal usar ropas femeninas si me identifico como hombre" : {
+            "tags": ["Género","Identidad","Ropa","Expresión"],
+            "info": "La utilización de ropa no define el género relacionado con esa ropa. El uso de la ropa es una expresión de identidad o incluso de comodidad, no una definición de género. Por ejemplo: las faldas muchas veces vistas como ropa de vestir son de uso femenino, pero en Escocia son mayormente utilizadas por hombres."
+        },
+    "¿Los colores tienen género?":{
+            "tags": ["Género","Identidad","Color","Expresión"],
+            "info": ["Los colores o colores favoritos no tienen género. El color que se prefiera no define el género en lo absoluto, solo es otro gusto más como lo sería una comida favorita o incluso un deporte favorito"]
+        },
+
+    "¿Está bien no sentirme del sexo biológico" :{
+            "tags": ["Género","Identidad","Sexo","Expresión"],
+            "info": "Es completamente normal no sentirse del sexo asignado, puede simplemente ser que no encajes dentro de los estándares puestos por la sociedad y eso está totalmente bien. Muchas veces esto puede ocurrir por nuestros gustos y esto proviene de la forma que fuimos criados, las experiencias que tuvimos o simplemente que nacimos así. "
+
+        },
+    "¿Tengo que identificarme como hombre o mujer?":{
+            "tags": ["Género","Identidad","Sexo","Expresión","Genero no binario", "Género fluido"],
+            "info": "No es necesario identificarse dentro de los binarios de hombre o mujer. Muchas personas se identifican como género no binario lo cual representa que su género no encaja dentro de lo masculino ni de lo femenino. Por otro lado hay personas que se identifican como género fluido lo cual significa que como lo dice su nombre, su género no se restringe por ningún parámetro; hay días donde talvés sientan un lado más masculino y otros donde sientan un lado más femenino o incluso ninguno de los dos"
+        },
+    "¿La sexualidad se refiere a nuestra atracción sexual?":{
+            "tags": ["Sexo","Expresión", "Atracción sexual", "Sexualidad"],
+            "info": "No, la sexualidad tambien se refiere a como se expresa el género o el sexo dentro de una sociedad. Además, la sexualidad también contiene la atracción sexual y todo lo relacionado a ella."
+        },
+    "¿Al tener relaciones homosexuales me iré al infierno?":{
+            "tags": ["Relaciones sexuales", "Religión"],
+            "info": "Tener relaciones sexuales no es una abominación. Pese a lo que digan muchas personas, estar atraído al mismo sexo es completamente normal e incluso es visto en la naturaleza por otros animales. No obstante, hay que recordar que siempre hay que tener las precauciones adecuadas al tener relaciones sexuales ya sean heterosexuales o homosexuales."
+        },
+    "¿Qué formas hay para expresar mi sexualidad":{
+            "tags": ["Sexualidad", "Expresión"],
+            "info": "Hay muchas formas de expresar nuestra sexualidad. Una muy común es a través de la ropa que se usa. Pese a que la ropa no tenga género, si puede ser un canal para expresarse libremente. Otros ejemplos incluyen: estilos de cabello, maquillaje, uso de accesorios, la forma en que nos presentamos visualmente, etc."
+
+        },
+    "¿Qué son los pronombres?":{
+        "tags":["Pronombres", "Expresión", "Gramática"],
+        "info": "Los pronombres on palabras que se emplean para referirse a algo o alguien sin usar su nombre. Por ejemplo: él, ella, ellos, ellas etc. En el español estos pronombres son asociados a un género en particular ya sea masculilno o feminino. Es por ello que muchas personas desean usar pronombres neutrales que no indiquen el género de la persona que los usa. Un ejemplo en tiempos recientes es el pronombre 'Elle', sin embargo, un pronombre neutral también podría ser tú y ustedes."
     }
 }
