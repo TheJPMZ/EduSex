@@ -1,15 +1,18 @@
-import random
-import requests
-import json 
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.button import Button
+import random
+import requests
+import json 
 
-class EduSexApp(App):
-    def conectar():
-        box_layout = BoxLayout()
+class Conexion(App):
+    url_firebase ="https://base-de-datos-edusex-default-rtdb.firebaseio.com/"
+
+    def conectar(self):
+        boxlayout = BoxLayout()
         button = Button(text= "Pagar")
-        box_layout.add_widget
+        boxlayout.add_widget(button)
+        return  boxlayout
 
 
 if __name__ == '__main__':
