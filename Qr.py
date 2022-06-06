@@ -74,7 +74,7 @@ class Generator(Screen):
         try:
             b1.add_widget(
                 Image(
-                    source="images/compra.png",
+                    source="images/factura.png",
                     size = (100,100)
                 )
             )
