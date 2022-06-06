@@ -20,15 +20,14 @@ from numpy import source, spacing
 
 
 
-
 class RoundedButton(Button):
     pass
 
-class Pago(Screen):
+class Generator(Screen):
     
 
     def __init__(self, **kw):
-        super(Pago,self).__init__(**kw)
+        super(Generator,self).__init__(**kw)
 
 
         box = BoxLayout(
