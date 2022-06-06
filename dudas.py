@@ -54,8 +54,8 @@ class Dudas(Screen):
                     text=name,
                     text_size=(300, None),
                     background_normal = "",
-                    background_color= (.97, .73, .38),
-                    color = (0,0,0),
+                    background_color= (.51, .21, .25),
+                    color = (1,1,1),
                     on_press = lambda x: self.choose_info(name)
                 )
             )
@@ -78,9 +78,9 @@ class Dudas(Screen):
             for x in informacion[tag].get("tags"):
                 if not x in lista:
                     b = Button(text=x,
-                            background_color= (.97, .73, .38),
-                            font_size=25,
-                            size_hint=(0.3, 0.05),
+                            background_color= (.51, .21, .25),
+                            font_size= 15,
+                            size_hint=(0.33, 0.10),
                             on_press = lambda a: self.set_list(x, True)
                         )
                     lista.append(x)
