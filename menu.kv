@@ -58,10 +58,11 @@
 			radius: [10]
 
 <BackgroundColor@Widget>
-    background_color: .87, .95, 1, 1
+    background_color: .0, .70, .67, 1
+    color: 1,1,1,1
     canvas.before:
         Color:
-            rgba: root.background_color
+            rgba: utils.get_color_from_hex('#96333e')
         Rectangle:
             size: self.size
             pos: self.pos
