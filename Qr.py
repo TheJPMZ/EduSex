@@ -18,6 +18,8 @@ from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.label import Label
 from kivy.graphics import Color, RoundedRectangle, Rectangle
 from numpy import source, spacing
+from kivymd.uix.button import MDIconButton
+
 
 
 
@@ -27,8 +29,24 @@ class RoundedButton(Button):
 class Generator(Screen):
     
 
+
     def __init__(self, **kw):
         super(Generator,self).__init__(**kw)
+        
+        def returntoguias():
+            self.manager.current = "menu"   
+        
+        self.add_widget(MDIconButton(
+                icon = 'less-than',
+                size = (1,1),
+                text_color = (0, 0, 0, 1),
+                x = 0,
+                y = 575,
+                on_press = lambda x: returntoguias()
+            ))
+        
+        
+        
 
 
         box = BoxLayout(

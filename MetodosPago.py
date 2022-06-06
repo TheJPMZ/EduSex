@@ -115,9 +115,12 @@ class Pago(Screen):
     def imprimir1(self, *args):
         print("Se eligió pagar con tarjeta de crédito")
         generarCodigoQR('Tarjeta de crédito', '123', '123')
+        self.manager.current = 'qr'
         
     
     def imprimir2(self, *args):
         print("Se eligió pagar con efectivo")
         generarCodigoQR('Efectivo', '123', '123')
+        self.manager.current = 'qr'
+
 

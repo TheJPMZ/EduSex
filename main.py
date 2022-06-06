@@ -37,6 +37,7 @@ from Info import planFInfo
 from Info import info_its
 from Info import info_mens
 
+import Qr
 import carrito
 
 import MetodosPago
@@ -114,6 +115,8 @@ class EduSexApp(MDApp):
         sm.add_widget(carrito.Carrito(name="carrito"))
 
         sm.add_widget(MetodosPago.Pago(name="metodospago"))
+        sm.add_widget(Qr.Generator(name="qr"))
+
 
         return sm
 
