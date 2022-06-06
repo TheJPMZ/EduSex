@@ -23,7 +23,7 @@ class Conexion (App):
         no_compa = random.randint(1,10000000002121)
         no_compa = random.randint(1,10000)
         print("Button clicked")
-        json_data = '{"Numero de compra": no_compa,"id_producto":id_producto,"total":}'
+        json_data = '{"Numero de compra": "123","id_producto":"dsdwqwerqcsv","total":"Q 20.00"}'
         dato = requests.patch(url= self.firebase,json=json.loads(json_data))
         print(dato)
 

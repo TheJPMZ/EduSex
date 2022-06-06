@@ -40,6 +40,7 @@ from Info import info_mens
 import carrito
 
 import MetodosPago
+import Conexion
 
 
 
